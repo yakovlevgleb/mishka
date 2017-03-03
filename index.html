@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
 
 <body>
@@ -23,17 +22,13 @@
     </section>
 
     <section class="menu">
-      <div class="menu__item menu__item--lighter">
-        <h2>Предметы интерьера</h2>
-      </div>
-      <div class="menu__item menu__item--darker">
-        <h2>Детские игрушки</h2>
-      </div>
+      <a class="menu__item menu__item--lighter"><h2>Предметы интерьера</h2></a>
+      <a class="menu__item menu__item--darker"><h2>Детские игрушки</h2></a>
     </section>
 
     <section class="product">
       <h2>Вязаные корзинки</h2>
-      <h3>Товар недели</h3>
+      <span>Товар недели</span>
       <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трехрамерах</p>
 
       <div class="product__features">
@@ -53,24 +48,37 @@
       <a href="#" class="product__btn btn">Заказать</a>
     </section>
 
-    <section class="pluses">
+    <ul class="pluses">
       <h2>Коротко о нас:</h2>
-      <p>Экологически чистые материалы</p>
-      <p>Скандинавский стиль по российской цене</p>
-      <p>Увеличивает лайки на фотографиях</p>
-      <p>Связано вручную с любовью и умилением</p>
-      <p>Поддержка отечественного производителя</p>
-      <p>Поставляется в подарочной упаковке</p>
-    </section>
+      <li class="pluses__item">
+        <p>Экологически чистые материалы</p>
+      </li>
+      <li class="pluses__item">
+        <p>Скандинавский стиль по российской цене</p>
+      </li>
+      <li class="pluses__item">
+        <p>Увеличивает лайки на фотографиях</p>
+      </li>
+      <li class="pluses__item">
+        <p>Связано вручную с любовью и умилением</p>
+      </li>
+      <li class="pluses__item">
+        <p>Поддержка отечественного производителя</p>
+      </li>
+      <li class="pluses__item">
+        <p>Поставляется в подарочной упаковке</p>
+      </li>
+    </ul>
 
     <section class="reviews">
       <h2>Отзывы</h2>
-      <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
-           В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+      <p class="reviews__comment">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
       <span>Анастася Красильникова</span>
-      <span>@misssssiskras</span>
-      <span>Туда</span>
-      <span>Сюда</span>
+      <a class="reviews__insta">@misssssiskras</a>
+      <div class="reviews__move">
+        <span class="reviews__arrow reviews__arrow--left">Туда</span>
+        <span class="reviews__arrow reviews__arrow--right">Сюда</span>
+      </div>
       <a href="#" class="reviews__btn btn">Написать</a>
     </section>
 
@@ -79,7 +87,7 @@
 
       <div class="contacts__email">
         <span>e-mail</span>
-        <span>info@mimimishkashop.ru</span>
+        <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
       </div>
 
       <div class="contacts__adress">
