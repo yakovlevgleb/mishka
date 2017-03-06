@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body>
+  <!--HEADER-->
+  <header class="header">
+    <a href="#" class="header__logo"><img width="10" height="10" src="img/10x10.png" alt="Mishka"></a>
+    <button type="button" title="Закрыть">Закрыть</button>
+    <nav class="header__nav">
+      <ul class="header__items">
+        <li><a href="#">Каталог товаров</a></li>
+        <li><a href="#">Вязание на заказ</a></li>
+        <li><a href="#">Поиск по сайту</a></li>
+        <li><a href="#">Корзина: пока пуста</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--HEADER END-->
+
+  <main>
+
+    <div class="page-header">
+      <h1>Вязание на заказ</h1>
+    </div>
+
+    <form class="form" action="https://echo.htmlacademy.ru/">
+      <p class="form__comment">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+
+      <div class="form__type">
+        <h2 class="form__header">Тип</h2>
+        <ul class="form__items">
+          <li><input type="radio" id="interier"><label for="interier">Аксессуар для интерьера</label></li>
+          <li><input type="radio" id="kids"><label for="kids">Детская игрушка</label></li>
+        </ul>
+      </div>
+
+      <div class="form__color">
+        <h2 class="form__header">Цвет</h2>
+        <ul class="form__items">
+          <li><input type="checkbox" id="white"><label for="interier">Белый</label></li>
+          <li><input type="checkbox" id="gray"><label for="kids">Серый</label></li>
+          <li><input type="checkbox" id="tiffani"><label for="kids">&laquo;Тиффани&raquo;</label></li>
+          <li><input type="checkbox" id="black"><label for="kids">Черный</label></li>
+          <li><input type="checkbox" id="rose"><label for="kids">Розовый</label></li>
+          <li><input type="checkbox" id="orange"><label for="kids">Оранжевый</label></li>
+        </ul>
+      </div>
+
+      <div class="form__fio">
+        <h2 class="form__header">ФИО</h2>
+        <ul class="form__items">
+          <li><label for="name">Имя:</label><input type="text" id="name" placeholder="Введите ваше имя*"></li>
+          <li><label for="fam">Фамилия:</label><input type="text" id="fam" placeholder="Укажите фамилию*"></li>
+          <li><label for="ot">Отчество:</label><input type="text" id="ot" placeholder="Отчество, если желаете"></li>
+        </ul>
+      </div>
+
+      <div class="form__telefone">
+        <h2 class="form__header">Тел</h2>
+        <input type="text" placeholder="+7 XXX XX XX*">
+      </div>
+
+      <div class="form__email">
+        <h2 class="form__header">E-mail</h2>
+        <input type="text" placeholder="Ваш Email*">
+      </div>
+
+      <div class="form__email">
+        <h2 class="form__header">Доп</h2>
+        <input type="text" placeholder="Опишите все ваши пожелания к заказу">
+      </div>
+
+      <p class="form__warning">Поля обязательны для заполнения</p>
+
+      <button class="form__btn btn" type="submit">Отправить заказ</button>
+
+    </form>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer class="footer">
+    <div class="footer__social">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">twitter</a>
+    </div>
+    <div class="footer__copirights">
+      <a href="#">Разработано</a>
+    </div>
+  </footer>
+  <!--FOOTER END-->
+
+</body>
+
+</html>
