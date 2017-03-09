@@ -9,5 +9,47 @@
     font-weight: 800;
     line-height: 18px;
     color: @black;
+
+    &::after {
+      content: "";
+      padding-right: 50px;
+      transform: translate(50%, -50%);
+      background-image: url("../img/logo-htmlacademy.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.footer__btn {
+  text-decoration: none;
+
+  &--inst {
+    &::before {
+      content: "";
+      padding-left: 50px;
+      transform: translate(50%, -50%);
+      background-image: url("../img/icon-insta.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--tw {
+    &::before {
+      content: "";
+      padding-left: 50px;
+      transform: translate(50%, -50%);
+      background-image: url("../img/icon-twitter.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--fb {
+    &::before {
+      content: "";
+      padding-left: 50px;
+      transform: translate(-50%, -50%);
+      background-image: url("../img/icon-fb.svg");
+      background-repeat: no-repeat;
+    }
   }
 }
