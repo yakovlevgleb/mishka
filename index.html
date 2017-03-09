@@ -4,16 +4,17 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
   <!--HEADER-->
   <header class="header">
-    <a href="#" class="header__logo"><img width="10" height="10" src="img/10x10.png" alt="Mishka"></a>
+    <a href="#" class="header__logo"><img src="img/logo-mobile.svg" alt="Mishka"></a>
     <button type="button" title="Закрыть">Закрыть</button>
     <nav class="header__nav">
       <ul class="header__items">
-        <li><a href="#">Каталог товаров</a></li>
+        <li><a href="catalog.html">Каталог товаров</a></li>
         <li><a href="#">Вязание на заказ</a></li>
         <li><a href="#">Поиск по сайту</a></li>
         <li><a href="#">Корзина: пока пуста</a></li>
@@ -36,7 +37,7 @@
 
     <section class="product">
       <h2>Вязаные корзинки</h2>
-      <span>Товар недели</span>
+      <span class="product__week">Товар недели</span>
       <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трехрамерах</p>
 
       <table class="poduct__info">
@@ -54,7 +55,7 @@
         </tr>
       </table>
 
-      <img width="10" height="10" src="img/10x10.png" alt="Pryaja">
+      <img width="260" height="315" src="img\triple-set-mobile@1x.jpg" alt="Pryaja">
       <span class="product__cost">Цена: 990 руб.</span>
       <a href="#" class="product__btn btn">Заказать</a>
     </section>
@@ -105,9 +106,9 @@
   <!--FOOTER-->
   <footer class="footer">
     <div class="footer__social">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">twitter</a>
+      <a href="https://www.instagram.com/htmlacademy" class="footer__btn footer__btn--inst"></a>
+      <a href="https://www.facebook.com/htmlacademy" class="footer__btn footer__btn--fb"></a>
+      <a href="https://twitter.com/htmlacademy_ru" class="footer__btn footer__btn--tw"></a>
     </div>
     <div class="footer__copirights">
       <a href="#">Разработано</a>
@@ -116,7 +117,7 @@
   <!--FOOTER END-->
 
   <form class="modal-add" action="https://echo.htmlacademy.ru/">
-    <h2>Добваить в корзину</h2>
+    <h2>Добавить в корзину</h2>
     <span>Выберите размер:</span>
     <input type="radio" class="modal-add__size"><label>S</label>
     <input type="radio" class="modal-add__size"><label>M</label>
