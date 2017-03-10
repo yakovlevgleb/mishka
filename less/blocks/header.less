@@ -1,15 +1,24 @@
 .header {
-  padding: 18px 0;
+  min-height: 395px;
   border-top: 1px solid @gray-line;
   border-bottom: 1px solid @gray-line;
 }
 
+.header__logo {
+  min-height: 80px;
+}
+
 .header__nav {
-  display: none;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .header__items {
-  li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  min-height:260px li {
     border-top: 1px solid @gray-line;
     padding: 27px 0;
 
@@ -25,4 +34,12 @@
     font-weight: 800;
     line-height: 24px;
   }
+}
+
+@media @tablet-widths {
+
+}
+
+@media @desktop-widths {
+
 }
