@@ -1,14 +1,14 @@
-.menu {
-
-}
+.menu {}
 
 .menu__item {
-  width: 320px;
-  font-size: 19px;
-  font-weight: 800;
-  line-height: 24px;
-  color: white;
-  padding: 30px 30px;
+  h2 {
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 24px;
+    color: white;
+  }
+
+  padding: 30px;
 
   &--lighter {
     display: block;
@@ -21,19 +21,8 @@
   }
 }
 @media @tablet-widths {
-  .menu {
-    display: flex;
-    justify-content: center;
-  }
 
-  .menu__item {
-    width: 334px;
-    font-size: 20px;
-    line-height: 30px;
-  }
 }
 @media @desktop-widths {
-  .menu__item {
-    width: 525px;
-  }
+
 }
