@@ -1,14 +1,15 @@
 .menu {}
 
 .menu__item {
+  text-decoration: none;
+
   h2 {
     font-size: 19px;
     font-weight: 800;
     line-height: 24px;
     color: white;
   }
-
-  padding: 30px;
+  padding: 30px 185px 30px 30px;
 
   &--lighter {
     display: block;
@@ -20,9 +21,22 @@
     background-color: @salad-drk;
   }
 }
-@media @tablet-widths {
 
+.menu__wrapper {
+  .container();
+  padding: 0;
+}
+@media @tablet-widths {
+  .menu__item {
+    padding: 35px 187px 35px 35px;
+  }
+
+  .menu__wrapper {
+    flex-wrap:nowrap;
+  }
 }
 @media @desktop-widths {
-
+  .menu__item {
+    padding: 35px 375px 35px 35px;
+  }
 }
