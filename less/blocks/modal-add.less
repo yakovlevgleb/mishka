@@ -3,7 +3,7 @@
   text-align: center;
   padding-top: 37px;
   padding-bottom: 46px;
-  box-shadow-top: 0 -5px 5px 90deg 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.25);
 
   h2 {
     width: 100%;
@@ -41,7 +41,8 @@
   background-color: @salad;
   border-color: @salad;
   color: @white;
-  padding: 14px 81px;
+  padding: 14px 83px 14px 81px;
+  max-width: 260px;
   font-family: inherit;
 }
 
@@ -60,6 +61,11 @@
     span {
       font-size: 17px;
     }
+  }
+
+  .modal-add__btn {
+    max-width: 350px;
+    padding: 20px 127px 16px;
   }
 }
 @media @desktop-widths {}
