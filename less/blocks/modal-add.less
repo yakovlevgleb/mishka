@@ -1,16 +1,27 @@
 .modal-add {
+  border: 1px solid @module-border;
+  text-align: center;
+  padding-top: 37px;
+  padding-bottom: 46px;
+  box-shadow-top: 0 -5px 5px 90deg 10px;
+
   h2 {
+    width: 100%;
     font-size: 25px;
     font-weight: 800;
     line-height: 30px;
     color: @black;
+    text-transform: uppercase;
+    margin-bottom: 26px;
   }
 
   span {
+    width: 100%;
     font-size: 15px;
     font-weight: 400;
     line-height: 30px;
     color: @gray;
+    margin-bottom: 28px;
   }
 
   label {
@@ -21,6 +32,11 @@
   }
 }
 
+.modal-add__select {
+  width: 100%;
+  margin-bottom: 31px;
+}
+
 .modal-add__btn {
   background-color: @salad;
   border-color: @salad;
@@ -28,3 +44,22 @@
   padding: 14px 81px;
   font-family: inherit;
 }
+
+.modal-add__size {}
+
+.modal-add__wrap {
+  .container();
+}
+@media @tablet-widths {
+  .modal-add {
+    h2 {
+      font-size: 30px;
+      line-height: 57px;
+    }
+
+    span {
+      font-size: 17px;
+    }
+  }
+}
+@media @desktop-widths {}

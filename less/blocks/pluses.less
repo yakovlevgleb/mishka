@@ -11,6 +11,7 @@
 }
 
 .pluses__item {
+  width: 100%;
   font-size: 17px;
   font-weight: 800;
   line-height: 20px;
@@ -26,8 +27,47 @@
   .container();
 }
 @media @tablet-widths {
-  .pluses__wrapper {
-    flex-direction: row;
+  .pluses {
+    h2 {
+      width: 100%;
+      font-size: 43px;
+      line-height: 50px;
+    }
+  }
+
+  .pluses__item {
+    width: 50%;
+    font-size: 20px;
+
+    &:nth-child(2) {
+      order: 1;
+    }
+
+    &:nth-child(3) {
+      order:3;
+    }
+
+    &:nth-child(4) {
+      order:5;
+    }
+
+    &:nth-child(5) {
+      order:2;
+    }
+
+    &:nth-child(6) {
+      order:4;
+    }
+
+    &:nth-child(7) {
+      order:7;
+    }
   }
 }
-@media @desktop-widths {}
+@media @desktop-widths {
+  .pluses {
+    h2 {
+      font-size: 53px;
+    }
+  }
+}
