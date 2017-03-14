@@ -22,8 +22,10 @@
     display: flex;
   }
 
-  position: absolute;
-  top: 1045px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border: 1px solid @module-border;
   text-align: center;
   padding-top: 37px;
@@ -73,6 +75,7 @@
   padding: 14px 83px 14px 81px;
   max-width: 260px;
   font-family: inherit;
+  margin: 0 auto;
 }
 
 .modal-add__wrap {
@@ -82,8 +85,7 @@
 
 @media @tablet-widths {
   .modal-add {
-    top: 1532px;
-    width: auto;
+    max-width: 568px;
     h2 {
       font-size: 30px;
       line-height: 57px;
@@ -96,6 +98,7 @@
 
   .modal-add__btn {
     max-width: 350px;
+
     padding: 20px 127px 16px;
   }
 
