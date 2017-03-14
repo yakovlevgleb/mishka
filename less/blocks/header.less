@@ -1,5 +1,4 @@
 .header {
-  min-height: 395px;
   border-top: 1px solid @gray-line;
   border-bottom: 1px solid @gray-line;
 }
@@ -9,22 +8,126 @@
   padding: 0;
   list-style: none;
 
-  li {
-    border-top: 1px solid @gray-line;
-    padding: 27px 0;
-
-    &:nth-last-child(1) {
-      border-bottom: 1px solid @gray-line;
-    }
-  }
-
   a {
-    color: black;
+    display: block;
+    color: @black;
+    background-color: @white;
     text-decoration: none;
     font-size: 17px;
     font-weight: 800;
     line-height: 24px;
+    border-top: 1px solid @gray-line;
+    padding-left: 46px;
+    padding-top: 31px;
+    padding-bottom: 31px;
+
+    &:nth-last-child(1) {
+      border-bottom: 1px solid @gray-line;
+      border-width: 100%;
+    }
   }
 }
-@media @tablet-widths {}
+
+.header__logo {
+  position: relative;
+  height: 80px;
+  text-align: center;
+  width: 100%;
+  padding-top: 22px;
+
+  img {
+    width: 86px;
+    height: 35px;
+  }
+}
+
+.header__nav {
+  button {
+    position: absolute;
+    top: 32px;
+    right: 31px;
+    z-index: 2;
+    display: block;
+    width: 21px;
+    height: 21px;
+    font-size: 0;
+    background-color: @white;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+      background-color: @white;
+    }
+
+    &:active {
+      background-color: @white;
+    }
+  }
+}
+
+.header__nav--closed {
+  button {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      background-image: url("../img/icon-menu-open.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 20px;
+      height: 14px;
+    }
+  }
+}
+
+.header__nav--opened {
+  button {
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../img/icon-menu-close.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 21px;
+      height: 21px;
+    }
+  }
+}
+
+.header__nav--opened .header__wrapper {
+  position: absolute;
+  top: 80;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.header__nav--nojs {
+  button {
+    display: none;
+  }
+}
+
+.header__nav--nojs .header__nav__wrapper {
+  position: static;
+  height: auto;
+}
+@media @mobile-widths-only {
+  .header__nav--closed li {
+    display: none;
+  }
+}
+@media @tablet-widths {
+  .header__logo {
+    height: 89px;
+    text-align: left;
+  }
+  .header__nav button {
+    display: none;
+  }
+}
 @media @desktop-widths {}

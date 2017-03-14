@@ -10,18 +10,21 @@
 <body>
   <!--HEADER-->
   <header class="header">
+
     <div class="header__logo">
       <a href="#"><img src="img/logo-mobile.svg" alt="Mishka"></a>
-      <button type="button" title="Закрыть">Закрыть</button>
     </div>
-    <nav class="header__nav">
-      <ul class="header__items">
-        <li><a href="catalog.html">Каталог товаров</a></li>
-        <li><a href="#">Вязание на заказ</a></li>
-        <li><a href="#">Поиск по сайту</a></li>
-        <li><a href="#">Корзина: пока пуста</a></li>
-      </ul>
+    <nav class="header__nav header__nav--nojs header__nav--opened">
+      <button type="button" title="Меню">Меню</button>
+      <div class="header__wrapper">
+        <ul class="header__items">
+          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li><a href="#">Вязание на заказ</a></li>
+          <li><a href="#">Поиск по сайту</a></li>
+          <li><a href="#">Корзина: пока пуста</a></li>
+        </ul>
     </nav>
+    </div>
   </header>
   <!--HEADER END-->
 
@@ -145,6 +148,23 @@
       <button class="btn modal-add__btn" type="submit">Добавить</button>
     </div>
   </form>
+
+  <script>
+      var navMain = document.querySelector('.header__nav');
+      var navToggle = document.querySelector('.header__nav button');
+
+      navMain.classList.remove('header__nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('header__nav--closed')) {
+          navMain.classList.remove('header__nav--closed');
+          navMain.classList.add('header__nav--opened');
+        } else {
+          navMain.classList.add('header__nav--closed');
+          navMain.classList.remove('header__nav--opened');
+        }
+      });
+    </script>
 
 </body>
 
