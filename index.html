@@ -67,7 +67,7 @@
         </table>
         <img width="260" height="315" src="img\triple-set-mobile@1x.jpg" alt="Pryaja">
         <span class="product__cost">Цена: 990 руб.</span>
-        <a href="#" class="product__btn btn">Заказать</a>
+        <a class="product__btn btn js-open-modal">Заказать</a>
       </div>
     </section>
 
@@ -136,7 +136,7 @@
   </footer>
   <!--FOOTER END-->
 
-  <form class="modal-add" action="https://echo.htmlacademy.ru/">
+  <form class="modal-add modal-add--inactive" action="https://echo.htmlacademy.ru/">
     <div class="modal-add__wrap">
       <h2>Добавить<br> в корзину</h2>
       <span>Выберите размер:</span>
@@ -148,23 +148,47 @@
       <button class="btn modal-add__btn" type="submit">Добавить</button>
     </div>
   </form>
+  <div class="modal-overlay modal-overlay--inactive"></div>
+
 
   <script>
-      var navMain = document.querySelector('.header__nav');
-      var navToggle = document.querySelector('.header__nav button');
+    var navMain = document.querySelector('.header__nav');
+    var navToggle = document.querySelector('.header__nav button');
 
-      navMain.classList.remove('header__nav--nojs');
+    navMain.classList.remove('header__nav--nojs');
 
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('header__nav--closed')) {
-          navMain.classList.remove('header__nav--closed');
-          navMain.classList.add('header__nav--opened');
-        } else {
-          navMain.classList.add('header__nav--closed');
-          navMain.classList.remove('header__nav--opened');
-        }
-      });
-    </script>
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('header__nav--closed')) {
+        navMain.classList.remove('header__nav--closed');
+        navMain.classList.add('header__nav--opened');
+      } else {
+        navMain.classList.add('header__nav--closed');
+        navMain.classList.remove('header__nav--opened');
+      }
+    });
+
+
+    var modalMain = document.querySelector('.modal-overlay');
+    var modalToggle = document.querySelector('.js-open-modal');
+    var modalForm = document.querySelector('.modal-add');
+
+    modalToggle.addEventListener('click', function() {
+      if (modalMain.classList.contains('modal-overlay--inactive')) {
+        modalMain.classList.remove('modal-overlay--inactive');
+        modalMain.classList.add('modal-overlay--active');
+        modalForm.classList.remove('modal-add--inactive');
+        modalForm.classList.add('modal-add--active');
+      } else {
+        modalMain.classList.add('modal-overlay--inactive');
+        modalMain.classList.remove('modal-overlay--active');
+        modalForm.classList.add('modal-add--inactive');
+        modalForm.classList.remove('modal-add--active');
+      }
+
+
+    });
+
+  </script>
 
 </body>
 

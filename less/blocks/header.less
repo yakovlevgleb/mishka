@@ -116,16 +116,23 @@
   position: static;
   height: auto;
 }
+
+
 @media @mobile-widths-only {
   .header__nav--closed li {
     display: none;
   }
 }
 @media @tablet-widths {
+  .header__wrapper {
+    position: static;
+  }
+
   .header__logo {
     height: 89px;
     text-align: left;
   }
+
   .header__nav button {
     display: none;
   }

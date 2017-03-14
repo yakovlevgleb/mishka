@@ -1,9 +1,38 @@
+.modal-overlay {
+  &--active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  &--inactive {
+    display: none;
+  }
+}
+
 .modal-add {
+  &--inactive {
+    display: none;
+  }
+  &--active {
+    display: flex;
+  }
+
+  position: absolute;
+  top: 1045px;
   border: 1px solid @module-border;
   text-align: center;
   padding-top: 37px;
   padding-bottom: 46px;
   box-shadow: 0 5px 10px rgba(0,0,0,.25);
+  background-color: @white;
+  z-index: 20;
+  width: 100%;
+
 
   h2 {
     width: 100%;
@@ -46,13 +75,15 @@
   font-family: inherit;
 }
 
-.modal-add__size {}
-
 .modal-add__wrap {
   .container();
+  .container-fluid();
 }
+
 @media @tablet-widths {
   .modal-add {
+    top: 1532px;
+    width: auto;
     h2 {
       font-size: 30px;
       line-height: 57px;
@@ -66,6 +97,10 @@
   .modal-add__btn {
     max-width: 350px;
     padding: 20px 127px 16px;
+  }
+
+  .modal-add__wrap {
+
   }
 }
 @media @desktop-widths {}

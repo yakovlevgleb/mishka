@@ -1,7 +1,10 @@
-.menu {}
+.menu {
+
+}
 
 .menu__item {
   text-decoration: none;
+  width: 100%;
 
   h2 {
     font-size: 19px;
@@ -24,6 +27,7 @@
 
 .menu__wrapper {
   .container();
+  .container-fluid();
   padding: 0;
 }
 @media @tablet-widths {
@@ -32,7 +36,7 @@
   }
 
   .menu__wrapper {
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
   }
 }
 @media @desktop-widths {
