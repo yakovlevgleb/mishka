@@ -59,6 +59,7 @@
   }
 
   .reviews__name {
+    width: 100%;
     order: 4;
   }
 
@@ -67,15 +68,23 @@
   }
 
   .reviews__move {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
     order: 6;
   }
 
   .reviews__btn {
-    display: flex;
+    position: absolute;
+    right: 0;
     align-self: flex-start;
     max-width: 175px;
     padding: 18px 36px 18px 42px;
     order: 2;
+  }
+
+  .reviews__wrapper {
+    position: relative;
   }
 }
 @media @desktop-widths {
