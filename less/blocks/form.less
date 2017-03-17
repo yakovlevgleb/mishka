@@ -1,18 +1,55 @@
+.form {
+  padding-top: 29px;
+  padding-bottom: 55px;
+}
+
 .form__comment {
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
   color: @gray;
+  margin-bottom: 30px;
 }
 
 .form__header {
+  position: relative;
   font-size: 17px;
   font-weight: 800;
-  line-height: 16px;
+  line-height: 17px;
   color: @salad;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    width: 198px;
+    height: 1px;
+    background-color: @salad;
+    position: absolute;
+    top: 50%;
+    left: 62px;
+  }
+}
+
+.form__email {
+  .form__header {
+    &::after {
+      left: 81px;
+      width: 179px;
+    }
+  }
+}
+
+.form__type {
+  .form__header {
+    margin-bottom: 27px;
+  }
 }
 
 .form__items {
+  input {
+    margin-right: 22px;
+  }
+
   label {
     font-size: 17px;
     font-weight: 800;
@@ -21,11 +58,91 @@
   }
 }
 
+.form__items {
+  li {
+    margin-bottom: 29px;
+  }
+}
+
+.form__color {
+  .form__header {
+    margin-bottom: 23px;
+  }
+}
+
+.form__fio {
+  .form__header {
+    margin-bottom: 33px;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+input[type=text] {
+  border: none;
+  background-color: @white;
+  border-bottom: 2px solid @black;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 260px;
+}
+
+.form__telefone {
+  margin-bottom: 34px;
+
+  .form__header {
+    margin-bottom: 9px;
+  }
+
+  input {
+    padding: 19px 0;
+  }
+}
+
+.form__email {
+  margin-bottom: 34px;
+
+  .form__header {
+    margin-bottom: 8px;
+  }
+
+  input {
+    padding: 19px 0;
+  }
+}
+
+.form__add {
+  margin-bottom: 18px;
+
+  .form__header {
+    margin-bottom: 23px;
+  }
+
+  input {
+    border: 2px solid @black;
+    height: 142px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 17px;
+    text-align: justify;
+  }
+}
+
 .form__warning {
+  text-align: top;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   color: @gray;
+  margin-bottom: 31px;
 }
 
 .form__btn {
@@ -33,4 +150,12 @@
   border-color: @gray;
   padding: 14px 45px;
   font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.form__wrapper {
+  .container();
 }
