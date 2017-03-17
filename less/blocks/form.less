@@ -128,10 +128,7 @@ input[type=text] {
   input {
     border: 2px solid @black;
     height: 142px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 17px;
+    padding: 15px 17px 15px 25px;
     text-align: justify;
   }
 }
@@ -159,3 +156,150 @@ ul {
 .form__wrapper {
   .container();
 }
+@media @tablet-widths {
+  .form__wrapper {
+    position: relative;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .form__comment {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 62px;
+  }
+
+  .form__header {
+    margin: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form__add,
+  .form__btn,
+  .form__color,
+  .form__email,
+  .form__fio,
+  .form__telefone,
+  .form__type,
+  .form__warning {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__color,
+  .form__email,
+  .form__telefone {
+    background-color: @footer-bg;
+  }
+
+  label {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  input {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .form__type {
+    .form__header {
+      margin-right: 130px;
+    }
+  }
+
+  .form__color {
+    padding-top: 50px;
+
+    .form__items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    // .form__header {
+    //   width: 21.74%;
+    // }
+    //
+    // .form__items {
+    //   width: 78.26%;
+    // }
+    li {
+      width: 50%;
+    }
+  }
+
+  .form__fio {
+    padding-top: 67px;
+
+    .form__header {
+      padding-right: 125px;
+    }
+
+    li {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    input {
+      padding: 19px;
+      width: 355px;
+    }
+  }
+
+  .form__email,
+  .form__telefone {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+      background-color: @footer-bg;
+      padding: 19px;
+      width: 501px;
+    }
+  }
+
+  .form__email {
+    padding-bottom: 50px;
+  }
+
+  .form__telefone {
+    margin: 0;
+    padding-top: 48px;
+    padding-bottom: 22px;
+  }
+
+  .form__add {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 53px;
+
+    input {
+      width: 501px;
+    }
+  }
+
+  .form__warning {
+    position: absolute;
+    font-size: 17px;
+    line-height: 30px;
+    bottom: 0;
+    right: 50px;
+  }
+
+  .form__btn {
+    max-width: 230px;
+  }
+}
+@media @desktop-widths {}
