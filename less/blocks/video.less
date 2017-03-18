@@ -43,8 +43,8 @@
     font-weight: 400;
     line-height: 24px;
     color: @gray;
-    margin-bottom: 29px;
   }
+  margin-bottom: 29px;
 }
 
 .video__content {
@@ -124,15 +124,29 @@
 }
 @media @desktop-widths {
   .video__border {
-    margin: 0 auto;
-    flex-direction: row;
+    position: relative;
+    padding-left: 700px;
+    padding-top: 99px;
+    padding-bottom: 59px;
   }
 
   .video__header {
-    width: auto;
+    width: 148px;
+    padding: 0;
+    margin-bottom: 43px;
+
+    &::after {
+      top: -60px;
+      left: 0;
+      transform: none;
+    }
   }
 
   .video__content {
+    position: absolute;
+    left: 0;
+    top: 0;
+
     img {
       width: 628px;
       height: 455px;
@@ -140,6 +154,14 @@
   }
 
   .video__comment {
+    padding: 0;
+    width: 221px;
+    margin-bottom: 51px;
+  }
 
+  .video__btn {
+    padding: 17px 42px 15px 44px;
+    max-width: 230px;
+    margin: 0;
   }
 }
