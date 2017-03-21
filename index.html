@@ -12,7 +12,7 @@
   <header class="header">
 
     <div class="header__logo">
-      <a href="#"><img src="img/logo-mobile.svg" alt="Mishka"></a>
+      <a href="index.html"><img src="img/logo-mobile.svg" alt="Mishka"></a>
     </div>
     <nav class="header__nav header__nav--nojs header__nav--closed">
       <button type="button" title="Меню">Меню</button>
@@ -173,20 +173,19 @@
     var modalForm = document.querySelector('.modal-add');
 
     modalToggle.addEventListener('click', function() {
-      if (modalMain.classList.contains('modal-overlay--inactive')) {
         modalMain.classList.remove('modal-overlay--inactive');
         modalMain.classList.add('modal-overlay--active');
         modalForm.classList.remove('modal-add--inactive');
         modalForm.classList.add('modal-add--active');
-      } else {
+      });
+
+      modalMain.addEventListener('click', function() {
         modalMain.classList.add('modal-overlay--inactive');
         modalMain.classList.remove('modal-overlay--active');
         modalForm.classList.add('modal-add--inactive');
         modalForm.classList.remove('modal-add--active');
-      }
+      });
 
-
-    });
   </script>
 
 </body>
