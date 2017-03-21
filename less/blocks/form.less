@@ -244,6 +244,11 @@ ul {
 }
 
 @media @tablet-widths {
+
+  .element__wrapper {
+    .container();
+  }
+
   .form__wrapper {
     display: block;
     margin: 0;
@@ -270,19 +275,6 @@ ul {
         display: none;
       }
     }
-  }
-
-  .form__comment,
-  .form__add,
-  .form__color,
-  .form__email,
-  .form__fio,
-  .form__telefone,
-  .form__type {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0 50px;
   }
 
   .form__color,
@@ -398,25 +390,20 @@ ul {
   }
 }
 @media @desktop-widths {
+
+  .element__wrapper {
+    .container();
+  }
+
   .form__comment {
-    margin-left: 225px;
+    margin-left: 175px;
     width: 700px;
   }
 
-  .form__add,
-  .form__color,
-  .form__email,
-  .form__fio,
-  .form__telefone,
-  .form__type {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0 114px;
-  }
-
   .form__header {
-    width: 111px;
+    display: flex;
+    justify-content: center;
+    width: 175px;
   }
 
   .form__color {
@@ -460,7 +447,7 @@ ul {
   }
 
   .form__btn {
-    margin-left: 225px;
+    margin-left: 175px;
   }
 
   .form__warning {
