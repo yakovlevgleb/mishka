@@ -30,7 +30,6 @@
 
 .header__logo {
   position: relative;
-  height: 80px;
   text-align: center;
   width: 100%;
   padding-top: 22px;
@@ -122,6 +121,12 @@
   }
 }
 @media @tablet-widths {
+  .header__logo {
+  img {
+      width: 111px;
+      height: 48px;
+    }
+  }
   .header__nav {
     width: auto;
     min-height: 89px;
@@ -146,5 +151,10 @@
   }
 }
 @media @desktop-widths {
-
+  .header__logo {
+  img {
+      width: 149px;
+      height: 72px;
+    }
+  }
 }

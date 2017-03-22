@@ -7,6 +7,10 @@
   padding-bottom: 120px;
   margin: 0;
 
+  @media @retina {
+  background-image: url("../img/hero-mobile@2x.jpg");
+}
+
   h1 {
     color: @slogan-h1;
     font-size: 27px;
@@ -23,6 +27,11 @@
   .slogan {
     padding-top: 100px;
     padding-bottom: 371px;
+    background-image: url("../img/hero-desktop@1x.jpg");
+
+    @media @retina {
+    background-image: url("../img/hero-desktop@1x.jpg");
+  }
 
     h1 {
       font-size: 43px;

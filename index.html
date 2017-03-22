@@ -12,7 +12,13 @@
   <header class="header">
 
     <div class="header__logo">
-      <a href="index.html"><img src="img/logo-mobile.svg" alt="Mishka"></a>
+      <a href="index.html">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" alt="Мишка">
+        </picture>
+        </a>
     </div>
     <nav class="header__nav header__nav--nojs header__nav--closed">
       <button type="button" title="Меню">Меню</button>
@@ -65,7 +71,11 @@
             <td><span>15 см</span></td>
           </tr>
         </table>
-        <img width="260" height="315" src="img\triple-set-mobile@1x.jpg" alt="Pryaja">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@1x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg  1x, img/triple-set-tablet@2x.jpg  2x">
+          <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Пряжа" class="works-item__img">
+        </picture>
         <span class="product__cost">Цена: 990 руб.</span>
         <a class="product__btn btn js-open-modal">Заказать</a>
       </div>
@@ -115,7 +125,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.465867058392!2d30.321382427590656!3d59.93623444928938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1488527128014"
             width="320" height="457" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-          <a href="#" class="contacts__btn btn">Напишите нам</a>
+        <a href="#" class="contacts__btn btn">Напишите нам</a>
       </div>
     </section>
   </main>
@@ -173,19 +183,18 @@
     var modalForm = document.querySelector('.modal-add');
 
     modalToggle.addEventListener('click', function() {
-        modalMain.classList.remove('modal-overlay--inactive');
-        modalMain.classList.add('modal-overlay--active');
-        modalForm.classList.remove('modal-add--inactive');
-        modalForm.classList.add('modal-add--active');
-      });
+      modalMain.classList.remove('modal-overlay--inactive');
+      modalMain.classList.add('modal-overlay--active');
+      modalForm.classList.remove('modal-add--inactive');
+      modalForm.classList.add('modal-add--active');
+    });
 
-      modalMain.addEventListener('click', function() {
-        modalMain.classList.add('modal-overlay--inactive');
-        modalMain.classList.remove('modal-overlay--active');
-        modalForm.classList.add('modal-add--inactive');
-        modalForm.classList.remove('modal-add--active');
-      });
-
+    modalMain.addEventListener('click', function() {
+      modalMain.classList.add('modal-overlay--inactive');
+      modalMain.classList.remove('modal-overlay--active');
+      modalForm.classList.add('modal-add--inactive');
+      modalForm.classList.remove('modal-add--active');
+    });
   </script>
 
 </body>
