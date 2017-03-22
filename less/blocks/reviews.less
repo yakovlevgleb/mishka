@@ -85,6 +85,14 @@
 
   .reviews__wrapper {
     position: relative;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: left;
+
+    @media @retina {
+    background-image: url("../img/review@2x.jpg");
+  }
   }
 }
 @media @desktop-widths {
