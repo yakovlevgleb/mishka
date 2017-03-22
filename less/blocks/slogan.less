@@ -1,14 +1,52 @@
 .slogan {
-  background-color: inherit;
+  background-color: @slogan-bg;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  padding-top: 85px;
-  padding-bottom: 130px;
+  background-position: center;
+  padding-top: 75px;
+  padding-bottom: 120px;
+  margin: 0;
 
   h1 {
     color: @slogan-h1;
     font-size: 27px;
     font-weight: 800;
     line-height: 30px;
+    text-align: center;
+  }
+}
+
+.slogan__wrapper {
+  .container();
+}
+@media @tablet-widths {
+  .slogan {
+    padding-top: 100px;
+    padding-bottom: 371px;
+
+    h1 {
+      font-size: 43px;
+      line-height: 50px;
+    }
+  }
+
+  .slogan__wrapper {
+
+  }
+}
+@media @desktop-widths {
+  .slogan {
+    padding-top: 163px;
+    padding-bottom: 354px;
+
+    h1 {
+      font-size: 53px;
+      line-height: 57px;
+    }
+  }
+
+  .slogan__wrapper {
+    padding-left: 225px;
+    padding-right: 225px;
   }
 }

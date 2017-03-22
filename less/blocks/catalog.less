@@ -2,15 +2,30 @@
   padding: 30px 0;
 }
 
+h1 {
+  margin: 0;
+}
+
 .catalog__item {
   margin-bottom: 30px;
+  border: 1px solid @gray-line;
 
   &:nth-last-child(1) {
     margin-bottom: 0;
   }
 }
 
+.catalog__features {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
 .catalog__info {
+  position: relative;
+  padding-left: 28px;
+  padding-right: 34px;
+  margin-bottom: 58px;
+
   h1 {
     font-size: 17px;
     font-weight: 800;
@@ -24,13 +39,124 @@
     line-height: 30px;
     color: @gray;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 204px;
+    background-color: @gray-line;
+    bottom: -27px;
+    left: 28px;
+  }
 }
 
 .catalog__cost {
+  position: relative;
+  padding-left: 28px;
+  padding-right: 26px;
+
   span {
     font-size: 15px;
     font-weight: 800;
     line-height: 24px;
     color: @black;
   }
+
+  a {
+    font-size: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-cart.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 19px;
+      height: 19px;
+      right: 27px;
+    }
+  }
+}
+
+.catalog__wrapper {
+  .container();
+}
+@media @tablet-widths {
+  .catalog__item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    img {
+      width: 334px;
+      height: 334px;
+    }
+  }
+
+  .catalog__features {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 334px;
+  }
+
+  .catalog__info {
+    padding-right: 106px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    span {
+      font-size: 15px;
+    }
+  }
+}
+@media @desktop-widths {
+  .catalog__wrapper {
+    justify-content: space-between;
+  }
+
+  .catalog__item {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 316px;
+    flex-wrap: wrap;
+
+    img {
+      width: 315px;
+      height: 462px;
+    }
+
+    &:nth-child(3){
+      .catalog__info {
+        margin-bottom: 45px;
+
+          &::after {
+            bottom: -20px;
+          }
+      }
+    }
+  }
+
+  .catalog__info {
+    padding-left: 27px;
+    padding-right: 56px;
+    margin-bottom: 70px;
+
+    &::after {
+      bottom: -44px;
+    }
+  }
+
+    .catalog__features {
+      width: auto;
+    }
 }

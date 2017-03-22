@@ -10,95 +10,155 @@
 <body>
   <!--HEADER-->
   <header class="header">
-    <a href="#" class="header__logo"><img src="img/logo-mobile.svg" alt="Mishka"></a>
-    <button type="button" title="Закрыть">Закрыть</button>
-    <nav class="header__nav">
-      <ul class="header__items">
-        <li><a href="#">Каталог товаров</a></li>
-        <li><a href="#">Вязание на заказ</a></li>
-        <li><a href="#">Поиск по сайту</a></li>
-        <li><a href="#">Корзина: пока пуста</a></li>
-      </ul>
+
+    <div class="header__logo">
+      <a href="index.html"><img src="img/logo-mobile.svg" alt="Mishka"></a>
+    </div>
+    <nav class="header__nav header__nav--nojs header__nav--closed">
+      <button type="button" title="Меню">Меню</button>
+      <div class="header__wrapper">
+        <ul class="header__items">
+          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li><a href="form.html">Вязание на заказ</a></li>
+          <li><a href="#">Поиск по сайту</a></li>
+          <li><a href="#">Корзина: пока пуста</a></li>
+        </ul>
     </nav>
+    </div>
   </header>
   <!--HEADER END-->
 
   <main>
 
     <div class="page-header">
-      <h1>Каталог товаров</h1>
+      <div class="page-header__wrapper">
+        <h1>Каталог товаров</h1>
+      </div>
     </div>
 
     <section class="catalog">
+      <div class="catalog__wrapper">
 
-      <article class="catalog__item catalog__item--zajka">
-        <img width="260" height="195" src="img/photo-1-mobile@1x.jpg" alt="Zajka">
+        <article class="catalog__item catalog__item--zajka">
+          <a href="#"><img width="260" height="195" src="img/photo-1-mobile@1x.jpg" alt="Zajka"></a>
 
-        <div class="catalog__info">
-          <h1>Зайчик-попрыгайчик</h1>
-          <span>Рост 30 см, вес 200 г</span>
-        </div>
+          <div class="catalog__features">
+            <div class="catalog__info">
+              <a href="#"><h1>Зайчик-попрыгайчик</h1></a>
+              <span>Рост 30 см, вес 200 г</span>
+            </div>
 
-        <div class="catalog__cost">
-          <span>1 200 руб.</span>
-          <a href="#">Заказать</a>
-        </div>
-      </article>
+            <div class="catalog__cost">
+              <span>1 200 руб.</span>
+              <a href="#">Заказать</a>
+            </div>
+          </div>
+        </article>
 
-      <article class="catalog__item catalog__item--basket">
-        <img width="260" height="195" src="img/photo-2-mobile@1x.jpg" alt="basket">
+        <article class="catalog__item catalog__item--basket">
+          <a href="#"><img width="260" height="195" src="img/photo-2-mobile@1x.jpg" alt="basket"></a>
 
-        <div class="catalog__info">
-          <h1>Корзинка для белья</h1>
-          <span>Диаметр 15см, высота 10 см</span>
-        </div>
+          <div class="catalog__features">
+            <div class="catalog__info">
+              <a href="#"><h1>Корзинка для белья</h1></a>
+              <span>Диаметр 15см, высота 10 см</span>
+            </div>
 
-        <div class="catalog__cost">
-          <span>690 руб.</span>
-          <a href="#">Заказать</a>
-        </div>
-      </article>
+            <div class="catalog__cost">
+              <span>690 руб.</span>
+              <a href="#">Заказать</a>
+            </div>
+          </div>
+        </article>
 
-      <article class="catalog__item catalog__item--bigbasket">
-        <img width="260" height="195" src="img/photo-3-mobile@1x.jpg" alt="bigbasket">
+        <article class="catalog__item catalog__item--bigbasket">
+          <a href="#"><img width="260" height="195" src="img/photo-3-mobile@1x.jpg" alt="bigbasket"></a>
 
-        <div class="catalog__info">
-          <h1>Большая корзинка для игрушек</h1>
-          <span>Диаметр 30см, высота 30 см</span>
-        </div>
+          <div class="catalog__features">
+            <div class="catalog__info">
+              <a href="#"><h1>Большая корзинка для игрушек</h1></a>
+              <span>Диаметр 30см, высота 30 см</span>
+            </div>
 
-        <div class="catalog__cost">
-          <span>1 500 руб.</span>
-          <a href="#">Заказать</a>
-        </div>
-      </article>
+            <div class="catalog__cost">
+              <span>1 500 руб.</span>
+              <a href="#">Заказать</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="video">
-      <div class="video__header">
-        <h2>Процесс произвводства</h2>
+      <div class="video__wrapper">
+        <div class="video__border">
+          <div class="video__header">
+            <a href="#"><h2>Процесс производства</h2></a>
+          </div>
+          <div class="video__content">
+            <a href="#"><img width="260" height="150" src="img/video-mobile@1x.jpg" alt="Video"></a>
+          </div>
+          <div class="video__comment">
+            <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          </div>
+          <a href="#" class="video__btn btn">Сделать заказ</a>
+        </div>
       </div>
-      <img class="video__content" width="260" height="150" src="img/video-mobile@1x.jpg" alt="Video">
-      <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <a href="#" class="video__btn btn">Сделать заказать</a>
     </section>
-
 
   </main>
 
   <!--FOOTER-->
   <footer class="footer">
-    <div class="footer__social">
-      <a href="https://www.instagram.com/htmlacademy" class="footer__btn footer__btn--inst"></a>
-      <a href="https://www.facebook.com/htmlacademy" class="footer__btn footer__btn--fb"></a>
-      <a href="https://twitter.com/htmlacademy_ru" class="footer__btn footer__btn--tw"></a>
-    </div>
-    <div class="footer__copirights">
-      <a href="#">Разработано</a>
+    <div class="footer__wrapper">
+      <div class="footer__social ">
+        <a href="https://www.instagram.com/htmlacademy" class="footer__btn footer__btn--inst"></a>
+        <a href="https://www.facebook.com/htmlacademy" class="footer__btn footer__btn--fb"></a>
+        <a href="https://twitter.com/htmlacademy_ru" class="footer__btn footer__btn--tw"></a>
+      </div>
+      <div class="footer__copirights">
+        <a href="#">Разработано</a>
+      </div>
     </div>
   </footer>
   <!--FOOTER END-->
+  <script>
+    var navMain = document.querySelector('.header__nav');
+    var navToggle = document.querySelector('.header__nav button');
 
+    navMain.classList.remove('header__nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('header__nav--closed')) {
+        navMain.classList.remove('header__nav--closed');
+        navMain.classList.add('header__nav--opened');
+      } else {
+        navMain.classList.add('header__nav--closed');
+        navMain.classList.remove('header__nav--opened');
+      }
+    });
+
+
+    var modalMain = document.querySelector('.modal-overlay');
+    var modalToggle = document.querySelector('.js-open-modal');
+    var modalForm = document.querySelector('.modal-add');
+
+    modalToggle.addEventListener('click', function() {
+      if (modalMain.classList.contains('modal-overlay--inactive')) {
+        modalMain.classList.remove('modal-overlay--inactive');
+        modalMain.classList.add('modal-overlay--active');
+        modalForm.classList.remove('modal-add--inactive');
+        modalForm.classList.add('modal-add--active');
+      } else {
+        modalMain.classList.add('modal-overlay--inactive');
+        modalMain.classList.remove('modal-overlay--active');
+        modalForm.classList.add('modal-add--inactive');
+        modalForm.classList.remove('modal-add--active');
+      }
+
+
+    });
+  </script>
 </body>
 
 </html>

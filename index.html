@@ -10,16 +10,21 @@
 <body>
   <!--HEADER-->
   <header class="header">
-    <a href="#" class="header__logo"><img src="img/logo-mobile.svg" alt="Mishka"></a>
-    <button type="button" title="Закрыть">Закрыть</button>
-    <nav class="header__nav">
-      <ul class="header__items">
-        <li><a href="catalog.html">Каталог товаров</a></li>
-        <li><a href="#">Вязание на заказ</a></li>
-        <li><a href="#">Поиск по сайту</a></li>
-        <li><a href="#">Корзина: пока пуста</a></li>
-      </ul>
+
+    <div class="header__logo">
+      <a href="index.html"><img src="img/logo-mobile.svg" alt="Mishka"></a>
+    </div>
+    <nav class="header__nav header__nav--nojs header__nav--closed">
+      <button type="button" title="Меню">Меню</button>
+      <div class="header__wrapper">
+        <ul class="header__items">
+          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li><a href="form.html">Вязание на заказ</a></li>
+          <li><a href="#">Поиск по сайту</a></li>
+          <li><a href="#">Корзина: пока пуста</a></li>
+        </ul>
     </nav>
+    </div>
   </header>
   <!--HEADER END-->
 
@@ -27,103 +32,161 @@
   <main>
 
     <section class="slogan">
-      <h1>Милые штуки ручной работы для дома</h1>
+      <div class="slogan__wrapper">
+        <h1>Милые штуки ручной работы для дома</h1>
+      </div>
     </section>
 
     <section class="menu">
-      <a class="menu__item menu__item--lighter"><h2>Предметы интерьера</h2></a>
-      <a class="menu__item menu__item--darker"><h2>Детские игрушки</h2></a>
+      <div class="menu__wrapper">
+        <a href="#" class="menu__item menu__item--lighter"><h2>Предметы интерьера</h2></a>
+        <a href="#" class="menu__item menu__item--darker"><h2>Детские игрушки</h2></a>
+      </div>
     </section>
 
     <section class="product">
-      <h2>Вязаные корзинки</h2>
-      <span class="product__week">Товар недели</span>
-      <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трехрамерах</p>
-
-      <table class="poduct__info">
-        <tr>
-          <td><span>Цвет:</span></td>
-          <td><span>&laquo;Тиффани&raquo;/серый</span></td>
-        </tr>
-        <tr>
-          <td><span>Диамерт:</span></td>
-          <td><span>25 см</span></td>
-        </tr>
-        <tr>
-          <td><span>Высота:</span></td>
-          <td><span>15 см</span></td>
-        </tr>
-      </table>
-
-      <img width="260" height="315" src="img\triple-set-mobile@1x.jpg" alt="Pryaja">
-      <span class="product__cost">Цена: 990 руб.</span>
-      <a href="#" class="product__btn btn">Заказать</a>
+      <div class="product__wrapper">
+        <h2>Вязаные корзинки</h2>
+        <div class="product__week"><span>Товар недели</span></div>
+        <div class="product__description">
+          <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        </div>
+        <table class="poduct__info">
+          <tr>
+            <td><span>Цвет:</span></td>
+            <td><span>&laquo;Тиффани&raquo;/серый</span></td>
+          </tr>
+          <tr>
+            <td><span>Диамерт:</span></td>
+            <td><span>25 см</span></td>
+          </tr>
+          <tr>
+            <td><span>Высота:</span></td>
+            <td><span>15 см</span></td>
+          </tr>
+        </table>
+        <img width="260" height="315" src="img\triple-set-mobile@1x.jpg" alt="Pryaja">
+        <span class="product__cost">Цена: 990 руб.</span>
+        <a class="product__btn btn js-open-modal">Заказать</a>
+      </div>
     </section>
 
     <div class="pluses">
-      <h2>Коротко о нас:</h2>
-      <span class="pluses__item">Экологически чистые материалы</span>
-      <span class="pluses__item">Скандинавский стиль по российской цене</span>
-      <span class="pluses__item">Увеличивает лайки на фотографиях</span>
-      <span class="pluses__item">Связано вручную с любовью и умилением</span>
-      <span class="pluses__item">Поддержка отечественного производителя</span>
-      <span class="pluses__item">Поставляется в подарочной упаковке</span>
+      <div class="pluses__wrapper">
+        <h2>Коротко о нас:</h2>
+        <span class="pluses__item">Экологически чистые материалы</span>
+        <span class="pluses__item">Скандинавский стиль по российской цене</span>
+        <span class="pluses__item">Увеличивает лайки на фотографиях</span>
+        <span class="pluses__item">Связано вручную с любовью и умилением</span>
+        <span class="pluses__item">Поддержка отечественного производителя</span>
+        <span class="pluses__item">Поставляется в подарочной упаковке</span>
+      </div>
     </div>
 
     <section class="reviews">
-      <h2>Отзывы</h2>
-      <blockquote class="reviews__comment">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
-      <span>Анастася Красильникова</span>
-      <a class="reviews__insta">@misssssiskras</a>
-      <div class="reviews__move">
-        <span class="reviews__arrow reviews__arrow--left">Туда</span>
-        <span class="reviews__arrow reviews__arrow--right">Сюда</span>
+      <div class="reviews__wrapper">
+        <h2>Отзывы</h2>
+        <blockquote class="reviews__comment">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+        </blockquote>
+        <span class="reviews__name">Анастася Красильникова</span>
+        <a href="#" class="reviews__insta">@misssssiskras</a>
+        <div class="reviews__move">
+          <span class="reviews__arrow reviews__arrow--left">Туда</span>
+          <span class="reviews__arrow reviews__arrow--right">Сюда</span>
+        </div>
+        <a href="#" class="reviews__btn btn">Написать</a>
       </div>
-      <a href="#" class="reviews__btn btn">Написать</a>
     </section>
 
     <section class="contacts">
-      <h2>Контакты</h2>
+      <div class="contacts__wrapper">
+        <h2>Контакты</h2>
 
-      <div class="contacts__email">
-        <span>e-mail</span>
-        <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        <div class="contacts__email">
+          <span>e-mail:</span>
+          <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        </div>
+
+        <div class="contacts__adress">
+          <span>адрес:</span>
+          <span>г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</span>
+        </div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.465867058392!2d30.321382427590656!3d59.93623444928938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1488527128014"
+            width="320" height="457" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+          <a href="#" class="contacts__btn btn">Напишите нам</a>
       </div>
-
-      <div class="contacts__adress">
-        <span>адрес:</span>
-        <span>г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</span>
-      </div>
-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.465867058392!2d30.321382427590656!3d59.93623444928938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1488527128014"
-          width="457" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-      <a href="#" class="contacts__btn btn">Напишите нам</a>
     </section>
   </main>
   <!--MAIN END-->
 
   <!--FOOTER-->
   <footer class="footer">
-    <div class="footer__social">
-      <a href="https://www.instagram.com/htmlacademy" class="footer__btn footer__btn--inst"></a>
-      <a href="https://www.facebook.com/htmlacademy" class="footer__btn footer__btn--fb"></a>
-      <a href="https://twitter.com/htmlacademy_ru" class="footer__btn footer__btn--tw"></a>
-    </div>
-    <div class="footer__copirights">
-      <a href="#">Разработано</a>
+    <div class="footer__wrapper">
+      <div class="footer__social ">
+        <a href="https://www.instagram.com/htmlacademy" class="footer__btn footer__btn--inst"></a>
+        <a href="https://www.facebook.com/htmlacademy" class="footer__btn footer__btn--fb"></a>
+        <a href="https://twitter.com/htmlacademy_ru" class="footer__btn footer__btn--tw"></a>
+      </div>
+      <div class="footer__copirights">
+        <a href="#">Разработано</a>
+      </div>
     </div>
   </footer>
   <!--FOOTER END-->
 
-  <form class="modal-add" action="https://echo.htmlacademy.ru/">
-    <h2>Добавить в корзину</h2>
-    <span>Выберите размер:</span>
-    <input type="radio" class="modal-add__size"><label>S</label>
-    <input type="radio" class="modal-add__size"><label>M</label>
-    <input type="radio" class="modal-add__size"><label>L</label>
-    <button class="btn modal-add__btn" type="submit">Добавить</button>
+  <form class="modal-add modal-add--inactive" action="https://echo.htmlacademy.ru/">
+    <div class="modal-add__wrap">
+      <h2>Добавить<br> в корзину</h2>
+      <span>Выберите размер:</span>
+      <div class="modal-add__select">
+        <input name="size" type="radio" class="modal-add__size"><label>S</label>
+        <input name="size" type="radio" class="modal-add__size"><label>M</label>
+        <input name="size" type="radio" class="modal-add__size"><label>L</label>
+      </div>
+      <button class="btn modal-add__btn" type="submit">Добавить</button>
+    </div>
   </form>
+  <div class="modal-overlay modal-overlay--inactive"></div>
+
+
+  <script>
+    var navMain = document.querySelector('.header__nav');
+    var navToggle = document.querySelector('.header__nav button');
+
+    navMain.classList.remove('header__nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('header__nav--closed')) {
+        navMain.classList.remove('header__nav--closed');
+        navMain.classList.add('header__nav--opened');
+      } else {
+        navMain.classList.add('header__nav--closed');
+        navMain.classList.remove('header__nav--opened');
+      }
+    });
+
+
+    var modalMain = document.querySelector('.modal-overlay');
+    var modalToggle = document.querySelector('.js-open-modal');
+    var modalForm = document.querySelector('.modal-add');
+
+    modalToggle.addEventListener('click', function() {
+        modalMain.classList.remove('modal-overlay--inactive');
+        modalMain.classList.add('modal-overlay--active');
+        modalForm.classList.remove('modal-add--inactive');
+        modalForm.classList.add('modal-add--active');
+      });
+
+      modalMain.addEventListener('click', function() {
+        modalMain.classList.add('modal-overlay--inactive');
+        modalMain.classList.remove('modal-overlay--active');
+        modalForm.classList.add('modal-add--inactive');
+        modalForm.classList.remove('modal-add--active');
+      });
+
+  </script>
 
 </body>
 

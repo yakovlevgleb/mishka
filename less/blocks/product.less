@@ -9,26 +9,28 @@
     margin-bottom: 8px;
   }
 
-  p {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    color: @gray;
-    margin-bottom: 33px;
-  }
-
   img {
-    margin-bottom: 29px
+    margin-bottom: 29px;
   }
 }
 
+.product__description {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: @gray;
+  margin-bottom: 33px;
+}
+
 .product__week {
-  font-size: 17px;
-  font-weight: 800;
-  line-height: 20px;
-  color: @salad;
-  text-transform: uppercase;
-  margin-bottom: 30px;
+  span {
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 20px;
+    color: @salad;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
 }
 
 .product__cost {
@@ -37,9 +39,38 @@
   line-height: 24px;
   color: @gray;
   margin-bottom: 28px;
+  padding-left: 67px;
 }
 
 .poduct__info {
+  margin-bottom: 28px;
+
+  td {
+    padding-bottom: 11px;
+    padding-top: 14px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 260px;
+      background-color: @gray-line;
+    }
+
+    &:nth-child(1) {
+      padding-right: 20px;
+    }
+
+    &:nth-child(2) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
   span {
     font-size: 15px;
     font-weight: 400;
@@ -50,4 +81,94 @@
 
 .product__btn {
   padding: 12px 83px;
+  max-width: 260px;
+  cursor: pointer;
+}
+
+.product__wrapper {
+  .container();
+}
+@media @tablet-widths {
+  .product__wrapper {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .product {
+    h2 {
+      font-size: 43px;
+      line-height: 50px;
+      margin-bottom: 57px;
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 35%;
+    }
+  }
+
+  .product__description {
+    width: 260px;
+    order: 2;
+  }
+
+  .poduct__info {
+    order: 3;
+
+    td {
+      &::after {
+        width: 290px;
+      }
+    }
+  }
+
+  .product__cost {
+    order: 4;
+    padding-left: 76px;
+  }
+
+  .product__btn {
+    order: 5;
+    padding: 18px 95px 18px 103px;
+    max-width: 292px;
+  }
+
+  .product__week {
+    span {
+      position: absolute;
+      top: 0;
+      right: 79px;
+      line-height: 17px;
+      width: 70px;
+      text-align: center;
+    }
+  }
+}
+@media @desktop-widths {
+  .product__wrapper {
+    padding-left: 225px;
+  }
+
+  .product {
+    padding-top: 134px;
+    h2 {
+      font-size: 53px;
+      line-height: 57px;
+    }
+
+    img {
+      right: 50px;
+    }
+  }
+
+  .product__week {
+    span {
+      position: absolute;
+      top: 0;
+      left: 97px;
+      text-align: center;
+    }
+  }
+
 }
