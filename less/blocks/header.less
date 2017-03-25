@@ -38,6 +38,16 @@
     width: 86px;
     height: 35px;
   }
+
+  a {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .header__nav {
@@ -122,11 +132,12 @@
 }
 @media @tablet-widths {
   .header__logo {
-  img {
+    img {
       width: 111px;
       height: 48px;
     }
   }
+
   .header__nav {
     width: auto;
     min-height: 89px;
@@ -152,7 +163,7 @@
 }
 @media @desktop-widths {
   .header__logo {
-  img {
+    img {
       width: 149px;
       height: 72px;
     }

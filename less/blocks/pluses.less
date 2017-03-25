@@ -11,6 +11,7 @@
 }
 
 .pluses__item {
+  position: relative;
   width: 100%;
   font-size: 17px;
   font-weight: 800;
@@ -20,6 +21,13 @@
 
   &:nth-last-child(1) {
     margin-bottom: 0;
+  }
+
+  svg {
+    position: absolute;
+    left: 8px;
+    top: -58px;
+    fill: @salad;
   }
 }
 
@@ -49,6 +57,7 @@
 
     &:nth-child(4) {
       order: 5;
+      margin-bottom: 0;
     }
 
     &:nth-child(5) {
@@ -61,17 +70,26 @@
 
     &:nth-child(7) {
       order: 7;
+      margin-bottom: 0;
     }
   }
 }
 @media @desktop-widths {
   .pluses {
+    padding-top: 70px;
+    padding-bottom: 89px;
+
     h2 {
       font-size: 53px;
     }
 
     .pluses__wrapper {
       padding-left: 225px;
+    }
+
+    .pluses__item {
+      width: 50%;
+      font-size: 20px;
     }
   }
 }

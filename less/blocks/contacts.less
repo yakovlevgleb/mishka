@@ -35,6 +35,15 @@
     line-height: 30px;
     color: @gray;
     border-bottom: 1px solid #62d1ba;
+
+    &:hover {
+      color: @salad;
+    }
+
+    &:active {
+      color: @salad;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -65,8 +74,23 @@
 
     iframe {
       position: static;
-      left:0;
+      left: 0;
       width: 768px;
+    }
+  }
+
+  .contacts__wrapper {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-flag.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 47px;
+      height: 81px;
+      right: 0;
     }
   }
 
@@ -97,6 +121,10 @@
     flex-direction: column;
     position: relative;
     padding-left: 225px;
+
+    &:before {
+      left: 63px;
+    }
   }
 
   .contacts {
