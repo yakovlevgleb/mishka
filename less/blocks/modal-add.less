@@ -35,7 +35,7 @@
     font-weight: 400;
     line-height: 30px;
     color: @gray;
-    margin-bottom: 28px;
+    margin-bottom: 48px;
   }
 
   label {
@@ -48,7 +48,7 @@
 
 .modal-add__select {
   width: 100%;
-  margin-bottom: 31px;
+  margin-bottom: 51px;
 }
 
 .modal-add__size {
@@ -63,18 +63,25 @@
   }
 }
 
+.modal-add__select {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 37px;
+  padding-right: 37px;
+}
+
 .modal-add {
   label {
     position: relative;
     cursor: pointer;
-    padding-left: 80px;
 
     &:after {
       content: "";
-      width: 82px;
-      height: 52px;
+      width: 80px;
+      height: 50px;
       position: absolute;
-      top: 10px;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       border: 2px solid @gray;
     }
@@ -104,21 +111,36 @@
 
 .modal-add__wrap {
   .container();
-  .container-fluid();
 }
-
+@media @mobile-widths-only {
+  .modal-add__wrap {
+    .container-fluid();
+  }
+}
 @media @tablet-widths {
   .modal-add {
     max-width: 568px;
 
     h2 {
       font-size: 30px;
-      line-height: 57px;
+      line-height: 30px;
     }
 
     span {
       font-size: 17px;
     }
+
+    label {
+      &:after {
+        width: 110px;
+        height: 50px;
+      }
+    }
+  }
+
+  .modal-add__select {
+    padding-left: 53px;
+    padding-right: 53px;
   }
 
   .modal-add__btn {
@@ -126,6 +148,8 @@
     padding: 20px 127px 16px;
   }
 
-  .modal-add__wrap {}
+  .modal-add__wrap {
+    padding-left: 106px;
+    padding-right: 106px;
+  }
 }
-@media @desktop-widths {}
