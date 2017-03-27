@@ -18,6 +18,14 @@ h1 {
 .catalog__features {
   padding-top: 28px;
   padding-bottom: 28px;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0,0,0,.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
+  }
 }
 
 .catalog__info {
@@ -42,6 +50,12 @@ h1 {
 
   a {
     text-decoration: none;
+    &:hover{
+      opacity: .6;
+    }
+    &:active {
+      opacity: .3;
+    }
   }
 
   &::after {
@@ -67,18 +81,25 @@ h1 {
     color: @black;
   }
 
-  a {
-    font-size: 0;
+  svg {
+    position: absolute;
+    right: 27px;
+    fill: rgba(0,0,0,.2);
+  }
+}
 
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url("../img/icon-cart.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 19px;
-      height: 19px;
-      right: 27px;
+.catalog__cart {
+  font-size: 0;
+
+  &:hover {
+    svg {
+      fill: @salad;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: .3;
     }
   }
 }
@@ -87,6 +108,10 @@ h1 {
   .container();
 }
 @media @tablet-widths {
+  .catalog {
+    padding-top: 79px;
+  }
+
   .catalog__item {
     width: 100%;
     display: flex;
@@ -107,7 +132,8 @@ h1 {
   }
 
   .catalog__info {
-    padding-right: 106px;
+    padding-right: 70px;
+    margin: 0;
 
     h1 {
       font-size: 20px;
@@ -115,6 +141,21 @@ h1 {
 
     span {
       font-size: 15px;
+    }
+
+    &::after {
+      width: 268px;
+      bottom: -167px;
+    }
+  }
+
+  .catalog__cost {
+    span {
+      font-size: 17px;
+    }
+
+    svg {
+      right: 31px;
     }
   }
 }
@@ -135,13 +176,13 @@ h1 {
       height: 462px;
     }
 
-    &:nth-child(3){
+    &:nth-child(3) {
       .catalog__info {
         margin-bottom: 45px;
 
-          &::after {
-            bottom: -20px;
-          }
+        &::after {
+          bottom: -20px;
+        }
       }
     }
   }
@@ -152,11 +193,12 @@ h1 {
     margin-bottom: 70px;
 
     &::after {
+      width: 255px;
       bottom: -44px;
     }
   }
 
-    .catalog__features {
-      width: auto;
-    }
+  .catalog__features {
+    width: auto;
+  }
 }

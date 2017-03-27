@@ -74,6 +74,18 @@
       border: 2px solid @gray;
       border-radius: 26px;
     }
+
+    &:hover {
+      &:before {
+        border: 2px solid @salad;
+      }
+    }
+
+    &:active {
+      &:before {
+        border: 2px solid rgba(0,0,0,.3);
+      }
+    }
   }
 }
 
@@ -121,6 +133,18 @@
       transform: translate(-50%, -50%);
       background-color: inherit;
       border: 2px solid @gray;
+    }
+
+    &:hover {
+      &:after {
+        border: 2px solid @salad;
+      }
+    }
+
+    &:active {
+      &:after {
+        border: 2px solid rgba(0,0,0,.3);
+      }
     }
   }
 }
@@ -175,9 +199,18 @@ input[type=text] {
   padding-top: 15px;
   padding-bottom: 15px;
   width: 260px;
+
+  &:hover {
+    border-bottom: 2px solid @salad;
+  }
+
+  &:focus {
+    border-bottom: 2px solid @salad;
+  }
 }
 
 .form__telefone {
+  position: relative;
   margin-bottom: 34px;
 
   .form__header {
@@ -187,9 +220,16 @@ input[type=text] {
   input {
     padding: 19px 0;
   }
+
+  svg {
+    position: absolute;
+    right: 8px;
+    bottom: 17px;
+  }
 }
 
 .form__email {
+  position: relative;
   margin-bottom: 34px;
 
   .form__header {
@@ -198,6 +238,12 @@ input[type=text] {
 
   input {
     padding: 19px 0;
+  }
+
+  svg {
+    position: absolute;
+    right: 8px;
+    bottom: 15px;
   }
 }
 
@@ -216,6 +262,14 @@ input[type=text] {
     resize: none;
     font-size: 19px;
     line-height: 18px;
+
+    &:hover {
+      border: 2px solid @salad;
+    }
+
+    &:focus {
+      border: 2px solid @salad;
+    }
   }
 }
 
@@ -242,9 +296,7 @@ ul {
 .form__wrapper {
   .container();
 }
-
 @media @tablet-widths {
-
   .element__wrapper {
     .container();
   }
@@ -301,13 +353,7 @@ ul {
       flex-direction: row;
       flex-wrap: wrap;
     }
-    // .form__header {
-    //   width: 21.74%;
-    // }
-    //
-    // .form__items {
-    //   width: 78.26%;
-    // }
+
     li {
       display: flex;
       align-items: center;
@@ -349,10 +395,24 @@ ul {
 
   .form__email {
     padding-bottom: 50px;
+
+    svg {
+      right: 76px;
+      bottom: 15px;
+    }
   }
 
   .form__telefone {
     margin: 0;
+
+    svg {
+      right: 76px;
+      bottom: 17px;
+    }
+  }
+
+  .element__wrapper {
+    position: relative;
   }
 
   .form__add {
@@ -390,7 +450,6 @@ ul {
   }
 }
 @media @desktop-widths {
-
   .element__wrapper {
     .container();
   }
@@ -435,6 +494,10 @@ ul {
 
     input {
       width: 700px;
+    }
+
+    svg {
+      right: 233px;
     }
   }
 
