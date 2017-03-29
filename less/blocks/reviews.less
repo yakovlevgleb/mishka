@@ -1,13 +1,26 @@
 .reviews {
+  position: relative;
   padding-top: 27px;
-  padding-bottom: 44px;
+  padding-bottom: 50px;
 
   h2 {
     font-size: 25px;
     font-weight: 800;
     line-height: 30px;
     color: @black;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: 320px;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    transform: rotate(180deg);
   }
 }
 
@@ -16,7 +29,7 @@
   font-weight: 800;
   line-height: 24px;
   color: @black;
-  margin-bottom: 16px;
+  margin-bottom: 2px;
 }
 
 .reviews__insta {
@@ -33,11 +46,11 @@
   font-weight: 400;
   line-height: 30px;
   color: @gray;
-  margin-bottom: 38px;
+  margin-bottom: 27px;
 }
 
 .reviews__move {
-  margin-bottom: 38px;
+  margin-bottom: 65px;
 }
 
 .reviews__arrow {
@@ -87,7 +100,7 @@
 }
 
 .reviews__btn {
-  padding: 12px 81px;
+  padding: 14px 81px;
   max-width: 260px;
 }
 

@@ -1,5 +1,5 @@
 .contacts {
-  padding-top: 44px;
+  padding-top: 36px;
   padding-bottom: 39px;
 
   h2 {
@@ -7,7 +7,7 @@
     font-weight: 800;
     line-height: 30px;
     color: @black;
-    margin-bottom: 39px;
+    margin-bottom: 26px;
   }
 
   span {
@@ -20,7 +20,7 @@
   img {
     position: absolute;
     left: 0;
-    bottom: 100px;
+    bottom: 52px;
     margin-bottom: 39px;
   }
 
@@ -34,14 +34,18 @@
       transform: translate(-50%, -50%);
       width: 66px;
       height: 100px;
-      right: 50%;
-      top: 50%;
+      left: 49%;
+      top: 59%;
     }
   }
 }
 
 .contacts__email {
-  margin-bottom: 39px;
+  margin-bottom: 30px;
+
+  span {
+    margin-right: 25px;
+  }
 
   a {
     text-decoration: none;
@@ -63,11 +67,22 @@
 }
 
 .contacts__adress {
-  margin-bottom: 539px;
+  margin-bottom: 533px;
+  display: flex;
+
+  span {
+    &:nth-last-of-type(1) {
+      width: 150px;
+    }
+
+    &:nth-child(1) {
+      margin-right: 30px;
+    }
+  }
 }
 
 .contacts__btn {
-  padding: 12px 50px;
+  padding: 14px 53px;
   max-width: 260px;
 }
 
