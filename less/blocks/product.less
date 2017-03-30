@@ -119,19 +119,20 @@
   }
 
   .product {
-    padding-bottom: 69px;
+    padding-top: 41px;
+    padding-bottom: 68px;
 
     h2 {
       font-size: 43px;
       line-height: 50px;
-      margin-bottom: 57px;
+      margin-bottom: 48px;
       z-index: 10;
     }
 
     img {
       position: absolute;
-      right: 0;
-      top: 97px;
+      right: 51px;
+      top: 107px;
     }
 
     svg {
@@ -140,17 +141,31 @@
       height: 15px;
       bottom: 0;
     }
+
+    &::before {
+      background-size: 768px;
+    }
   }
 
   .product__description {
-    width: 260px;
+    width: 285px;
     order: 2;
+    margin-bottom: 35px;
+
+    p {
+      line-height: 30px;
+      font-size: 17px;
+    }
   }
 
   .poduct__info {
     order: 3;
+    margin: 0 0 55px;
 
     td {
+      padding-bottom: 9px;
+      padding-top: 9px;
+
       &::after {
         width: 290px;
       }
@@ -159,20 +174,25 @@
 
   .product__cost {
     order: 4;
-    padding-left: 76px;
+    padding-left: 75px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 35px;
   }
 
   .product__btn {
     order: 5;
-    padding: 18px 95px 18px 103px;
+    padding: 14px 95px 14px 100px;
     max-width: 292px;
   }
 
   .product__week {
+    margin: 0;
+
     span {
       position: absolute;
-      top: 0;
-      right: 79px;
+      top: 12px;
+      right: 78px;
       line-height: 17px;
       width: 70px;
       text-align: center;
@@ -185,16 +205,13 @@
   }
 
   .product {
-    padding-top: 124px;
+    padding-top: 119px;
     padding-bottom: 96px;
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-repeat: repeat-x;
-    background-position: bottom;
 
     h2 {
       font-size: 53px;
       line-height: 57px;
-      margin-bottom: 46px;
+      margin-bottom: 47px;
     }
 
     img {
@@ -202,12 +219,15 @@
       right: 50px;
       margin: 0;
     }
+    &:before {
+      background-size: 1150px;
+    }
   }
 
   .product__description {
     font-size: 17px;
     line-height: 30px;
-    margin-bottom: 45px;
+    margin-bottom: 48px;
     width: 290px;
   }
 
@@ -215,8 +235,8 @@
     margin: 0 0 105px;
 
     td {
-      padding-bottom: 10px;
-      padding-top: 10px;
+      padding-bottom: 11px;
+      padding-top: 8px;
 
       &:nth-child(1) {
         padding-right: 26px;
@@ -243,5 +263,6 @@
   .product__btn {
     padding-top: 14px;
     padding-bottom: 14px;
+    padding-left: 102px;
   }
 }
