@@ -1,5 +1,5 @@
 .catalog {
-  padding: 30px 0;
+  padding-top: 30px;
 }
 
 h1 {
@@ -16,7 +16,7 @@ h1 {
 }
 
 .catalog__features {
-  padding-top: 28px;
+  padding-top: 25px;
   padding-bottom: 28px;
 
   &:hover {
@@ -32,13 +32,14 @@ h1 {
   position: relative;
   padding-left: 28px;
   padding-right: 34px;
-  margin-bottom: 58px;
+  margin-bottom: 41px;
 
   h1 {
     font-size: 17px;
     font-weight: 800;
     line-height: 24px;
     color: @black;
+    padding-bottom: 5px;
   }
 
   span {
@@ -50,6 +51,7 @@ h1 {
 
   a {
     text-decoration: none;
+
     &:hover{
       opacity: .6;
     }
@@ -64,7 +66,7 @@ h1 {
     height: 1px;
     width: 204px;
     background-color: @gray-line;
-    bottom: -27px;
+    bottom: -20px;
     left: 28px;
   }
 }
@@ -117,10 +119,12 @@ h1 {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-bottom: 52px;
 
     img {
       width: 334px;
       height: 334px;
+      vertical-align: top;
     }
   }
 
@@ -128,6 +132,8 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-top: 23px;
+    padding-bottom: 30px;
     width: 334px;
   }
 
@@ -145,11 +151,13 @@ h1 {
 
     &::after {
       width: 268px;
-      bottom: -167px;
+      bottom: -178px;
+      left:32px;
     }
   }
 
   .catalog__cost {
+    padding-left: 32px;
     span {
       font-size: 17px;
     }
@@ -160,8 +168,15 @@ h1 {
   }
 }
 @media @desktop-widths {
+  .catalog {
+    padding-top: 128px;
+  }
   .catalog__wrapper {
     justify-content: space-between;
+  }
+
+  .catalog__features {
+    padding-bottom: 25px;
   }
 
   .catalog__item {
@@ -178,10 +193,10 @@ h1 {
 
     &:nth-child(3) {
       .catalog__info {
-        margin-bottom: 45px;
+        margin-bottom: 39px;
 
         &::after {
-          bottom: -20px;
+          bottom: -17px;
         }
       }
     }
@@ -190,12 +205,16 @@ h1 {
   .catalog__info {
     padding-left: 27px;
     padding-right: 56px;
-    margin-bottom: 70px;
+    margin-bottom: 63px;
 
     &::after {
       width: 255px;
-      bottom: -44px;
+      bottom: -41px;
     }
+  }
+
+  .catalog__cost {
+    padding-left: 25px;
   }
 
   .catalog__features {

@@ -1,6 +1,7 @@
 .page-header {
   background-color: @footer-bg;
-  padding: 75px 0;
+  padding-top: 70px;
+  padding-bottom: 76px;
 
   h1 {
     font-size: 27px;
@@ -17,6 +18,9 @@
 @media @tablet-widths {
   .page-header {
     position: relative;
+    padding-top: 69px;
+    padding-bottom: 80px;
+
     h1 {
       font-size: 43px;
       line-height: 50px;
@@ -28,6 +32,7 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-position: center;
       background-repeat: repeat-x;
+      background-size: 768px;
       width: 100%;
       height: 34px;
       bottom: -17px;
@@ -36,9 +41,14 @@
 }
 @media @desktop-widths {
   .page-header {
+    padding-bottom: 104px;
     h1 {
       font-size: 53px;
       line-height: 57px;
+    }
+
+    &:after {
+      background-size: 1150px;
     }
   }
 }
