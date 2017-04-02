@@ -108,25 +108,25 @@
   .container();
 }
 @media @tablet-widths {
-  .reviews {
-    padding-top: 105px;
-    padding-bottom: 95px;
+  .reviews__wrapper {
+    padding-top: 76px;
     position: relative;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-position: left 27px;
-    top: 0;
+    background-size: 350px 457px;
 
     @media @retina {
       background-image: url("../img/review@2x.jpg");
     }
+  }
 
+  .reviews {
+    padding-bottom: 83px;
     h2 {
       font-size: 43px;
       line-height: 50px;
       order: 1;
-      margin-bottom: 46px;
+      margin-bottom: 48px;
     }
 
     &::before {
@@ -147,6 +147,7 @@
 
   .reviews__insta {
     order: 5;
+    padding-bottom: 13px;
   }
 
   .reviews__move {
@@ -160,7 +161,7 @@
     margin-bottom: 0;
     width: 167px;
     right: 14px;
-    bottom: 156px;
+    bottom: 74px;
   }
 
   .reviews__arrow {
@@ -197,19 +198,25 @@
     right: 50px;
     align-self: flex-start;
     max-width: 175px;
-    top: 106px;
+    top: 79px;
     padding: 15px 36px 13px 40px;
     order: 2;
   }
 }
 @media @desktop-widths {
   .reviews__wrapper {
-    padding-left: 225px;
+      padding-left: 225px;
+      padding-top: 76px;
+      position: relative;
+      background-image: url("../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: 50px 6px;
+      background-size: 350px 457px;
   }
 
   .reviews {
-    padding-top: 77px;
-    padding-bottom: 151px;
+    padding: 0;
+    padding-bottom: 90px;
     background-position: 50px 6px;
 
     h2 {
@@ -233,11 +240,15 @@
   }
 
   .reviews__move {
-    bottom: 210px;
+    bottom: 120px;
   }
 
   .reviews__btn {
     top: 85px;
     right: 50px;
+  }
+
+  .reviews__insta {
+    padding-bottom: 60px;
   }
 }
