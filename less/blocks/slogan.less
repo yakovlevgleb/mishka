@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-position: center -20px;
   padding-top: 70px;
-  padding-bottom: 122px;
+
   margin: 0;
   @media @retina {
     background-image: url("../img/hero-mobile@2x.jpg");
@@ -21,12 +21,11 @@
 
 .slogan__wrapper {
   .container();
-  margin-bottom: 118px;
+  margin-bottom: 122px;
 }
 @media @tablet-widths {
   .slogan {
     padding-top: 151px;
-    padding-bottom: 373px;
     background-image: url("../img/hero-desktop@1x.jpg");
     background-position: center -3px;
     @media @retina {
@@ -38,11 +37,13 @@
       line-height: 50px;
     }
   }
+  .slogan__wrapper {
+    margin-bottom: 368px;
+  }
 }
 @media @desktop-widths {
   .slogan {
     padding-top: 152px;
-    padding-bottom: 358px;
     background-position-y: -3px;
 
     h1 {
@@ -54,5 +55,6 @@
   .slogan__wrapper {
     padding-left: 225px;
     padding-right: 225px;
+    margin-bottom: 353px;
   }
 }

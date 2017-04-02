@@ -1,25 +1,13 @@
 .menu {
   position: relative;
-  background-color: @slogan-bg;
+  background: transparent;
 }
 
 .menu__item {
   position: relative;
   text-decoration: none;
   width: 100%;
-  margin-top: 5px;
-
-  padding: 20px 185px 30px 28px;
-
-  &:hover {
-    margin-top: 0;
-    padding-top: 15px;
-    padding-bottom: 40px;
-
-    svg {
-      top: 15px;
-    }
-  }
+  padding: 25px 185px 30px 28px;
 
   &:active {
     h2 {
@@ -92,13 +80,22 @@
   }
 
   .menu__item {
+    margin-top: 5px;
+    padding: 28px 187px 35px 35px;
+
     h2 {
       line-height: 30px;
     }
-    padding: 28px 187px 35px 35px;
+
 
     &:hover {
+      margin-top: 0;
+      padding-top: 15px;
       padding-bottom: 40px;
+
+      svg {
+        top: 25px;
+      }
     }
 
     &--lighter {
