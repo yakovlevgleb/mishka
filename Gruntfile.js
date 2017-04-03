@@ -1,10 +1,8 @@
 "use strict";
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks("grunt-contrib-less");
-  grunt.loadNpmTasks("grunt-browser-sync");
-  grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-postcss");
+
+  require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
     less: {
@@ -14,39 +12,60 @@ module.exports = function(grunt) {
         }
       }
     },
-
     postcss: {
       style: {
         options: {
           processors: [
-            require("autoprefixer")({browsers: [
-              "last 2 versions"
-            ]})
+            require("autoprefixer")({
+              browsers: […]
+            }),
           ]
         },
         src: "css/*.css"
       }
     },
-
-    browserSync: {
-      server: {
-        bsFiles: {
-          src: [
-            "*.html",
-            "css/*.css"
-          ]
-        },
+    csso: {
+      style: {
         options: {
-          server: ".",
-          watchTask: true,
-          notify: false,
-          open: true,
-          cors: true,
-          ui: false
+          report: "gzip"
+        },
+        files: {
+          "css/style.min.css": ["css/style.css"]
         }
       }
     },
-
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3,
+          progressive: true
+        },
+        files: [{
+          expand: true,
+          src: ["img/**/*.{png,jpg,gif}"]
+        }]
+      }
+    },
+    svgstore: {
+      options: {
+        svg: {
+          style: "display: none"
+        }
+      },
+      symbols: {
+        files: {
+          "img/symbols.svg": ["img/icons/*.svg"]
+        }
+      }
+    },
+    svgmin: {
+      symbols: {
+        files: [{
+          expand: true,
+          src: ["img/icons/*.svg"]
+        }]
+      }
+    },
     watch: {
       style: {
         files: ["less/**/*.less"],
@@ -56,4 +75,13 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
+
+  grunt.registerTask("build", [
+    "less",
+    "postcss",
+    "csso",
+    "symbols",
+    "imagemin"
+  ]);
 };

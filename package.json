@@ -10,7 +10,8 @@
     "grunt-browser-sync": "2.2.0",
     "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-watch": "1.0.0",
-    "grunt-postcss": "0.8.0"
+    "grunt-postcss": "0.8.0",
+    "load-grunt-tasks": "^3.5.2"
   },
   "scripts": {
     "test": "editorconfig-cli",
@@ -27,5 +28,8 @@
   ],
   "engines": {
     "node": "6.10"
+  },
+  "dependencies": {
+    "load-grunt-tasks": "^3.5.2"
   }
 }
