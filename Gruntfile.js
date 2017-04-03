@@ -96,7 +96,7 @@ module.exports = function(grunt) {
         tasks: ["copy:html"]
       },
       style: {
-        files: ["less/**/*.{scss,less}"],
+        files: ["less/**/*.less"],
         tasks: ["less", "postcss", "csso"]
       }
     },
