@@ -11,12 +11,15 @@ module.exports = function(grunt) {
         }
       }
     },
+
     postcss: {
       style: {
         options: {
           processors: [
             require("autoprefixer")({
-              browsers: ['last 2 versions']
+              browsers: [
+                "last 2 versions"
+              ]
             }),
             require("css-mqpacker")({
               sort: true
@@ -24,6 +27,25 @@ module.exports = function(grunt) {
           ]
         },
         src: "build/css/*.css"
+      }
+    },
+
+    browserSync: {
+      server: {
+        bsFiles: {
+          src: [
+            "build/*.html",
+            "build/css/*.css"
+          ]
+        },
+        options: {
+          server: "build/",
+          watchTask: true,
+          notify: false,
+          open: true,
+          cors: true,
+          ui: false
+        }
       }
     },
     csso: {
@@ -51,7 +73,7 @@ module.exports = function(grunt) {
     svgstore: {
       options: {
         svg: {
-          style: "display: none"
+          style: "display:none"
         }
       },
       symbols: {
@@ -68,24 +90,13 @@ module.exports = function(grunt) {
         }]
       }
     },
-    browserSync: {
-      server: {
-        bsFiles: {
-          src: ["build/*.html", "build/css/*.css"]
-        },
-        options: {
-          server: "build/",
-          watchTask: true
-        }
-      }
-    },
     watch: {
       html: {
         files: ["*.html"],
         tasks: ["copy:html"]
       },
       style: {
-        files: ["less/**/*.less"],
+        files: ["less/**/*.{scss,less}"],
         tasks: ["less", "postcss", "csso"]
       }
     },
@@ -101,14 +112,16 @@ module.exports = function(grunt) {
           ],
           dest: "build"
         }]
+      },
+      html: {
+        files: [{
+          expand: true,
+          src: [
+            "*.html"
+          ],
+          dest: "build"
+        }]
       }
-    },
-    html: {
-      files: [{
-        expand: true,
-        src: ["*.html"],
-        dest: "build"
-      }]
     },
     clean: {
       build: ["build"]
@@ -124,6 +137,7 @@ module.exports = function(grunt) {
     "postcss",
     "csso",
     "symbols",
-    "imagemin"
+    "imagemin",
+    "serve"
   ]);
 };
