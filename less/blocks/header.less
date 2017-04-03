@@ -1,4 +1,6 @@
 .header {
+  padding-top: 22px;
+  padding-bottom: 18px;
   border-top: 1px solid @gray-line;
   border-bottom: 1px solid @gray-line;
 }
@@ -17,12 +19,11 @@
     font-weight: 800;
     line-height: 24px;
     border-top: 1px solid @gray-line;
-    padding-left: 46px;
+    padding-left: 76px;
     padding-top: 31px;
     padding-bottom: 31px;
 
     &:nth-last-child(1) {
-      border-bottom: 1px solid @gray-line;
       border-width: 100%;
     }
   }
@@ -30,14 +31,22 @@
 
 .header__logo {
   position: relative;
-  height: 80px;
   text-align: center;
   width: 100%;
-  padding-top: 22px;
 
   img {
     width: 86px;
     height: 35px;
+  }
+
+  a {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -97,31 +106,150 @@
     }
   }
 }
-@media @mobile-widths-only {
-  .header__nav--closed li {
-    display: none;
+
+.header__catalog,
+.header__form,
+.header__new,
+.header__sale {
+  background-color: @white;
+
+  a {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.header__search {
+  position: relative;
+  background-color: @white;
+
+  svg {
+    position: absolute;
+    opacity: 0.3;
+    left: 30px;
+    top: 35px;
+
+    &:hover {
+      opacity: 1;
+      fill: @salad;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.header__basket {
+  background-color: @white;
+}
+
+.header__link {
+  position: relative;
+
+  svg {
+    position: absolute;
+    opacity: 0.2;
+    left: 30px;
+    top: 35px;
   }
 
-  .header__nav--opened .header__wrapper {
-    position: absolute;
-    top: 80;
-    left: 0;
-    width: 100%;
-    z-index: 10;
+  &:hover {
+    opacity: 0.6;
+
+    svg {
+      fill: @salad;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.header__new {
+  display: none;
+}
+
+.header__sale {
+  display: none;
+}
+@media @mobile-widths-only {
+  .header__nav--closed {
+    .header__wrapper {
+      display: none;
+    }
+  }
+
+  .header__nav--opened {
+    .header__wrapper {
+      position: absolute;
+      top: 78px;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
   }
 
   .header__nav--nojs {
+    position: static;
+
     button {
       display: none;
     }
   }
 
-  .header__nav--nojs .header__wrapper {
-    position: static;
-    height: auto;
+  .header__nav--nojs {
+    .header__wrapper {
+      display: block;
+    }
+  }
+
+  .header__shipping {
+    display: none;
   }
 }
 @media @tablet-widths {
+  .header__wrapper {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    width: 768px;
+    padding: 0;
+    position: relative;
+  }
+
+  .header {
+    display: flex;
+    padding: 0;
+  }
+
+  .header__logo {
+    position: relative;
+    width: auto;
+    text-align: inherit;
+    padding-top: 20px;
+
+    a {
+      display: block;
+      position: absolute;
+      width: 111px;
+      height: 48px;
+      left: 49px;
+    }
+
+    img {
+      width: 111px;
+      height: 48px;
+    }
+  }
+
   .header__nav {
     width: auto;
     min-height: 89px;
@@ -130,10 +258,15 @@
   }
 
   .header__items {
-    display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
     justify-content: space-between;
+
+    a {
+      padding: 0;
+      border: none;
+      background: inherit;
+    }
   }
 
   .header__wrapper {
@@ -141,10 +274,190 @@
     justify-content: space-between;
   }
 
-  .header__nav button {
-    display: none;
+  .header__catalog {
+    position: absolute;
+    top: 105px;
+    left: 48px;
+    z-index: 10;
+    background-color: inherit;
+
+    a {
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
+  .header__form {
+    position: absolute;
+    top: 105px;
+    left: 217px;
+    z-index: 10;
+    background-color: inherit;
+
+    a {
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
+  .header__search {
+    position: absolute;
+    right: 346px;
+    top: 36px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 88px;
+      top: -37px;
+      left: -34px;
+      background-color: @gray-line;
+    }
+
+    a {
+      font-size: 0;
+    }
+
+    svg {
+      position: static;
+    }
+  }
+
+  .header__basket {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+
+    svg {
+      position: absolute;
+      left: -51px;
+      top: 4px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 88px;
+      top: -30px;
+      left: -84px;
+      background-color: @gray-line;
+    }
+  }
+
+  .header__shipping {
+    position: absolute;
+    z-index: 10;
+    font-size: 15px;
+    line-height: 24px;
+    top: 105px;
+    right: 50px;
+  }
+
+  .header__nav {
+    button {
+      display: none;
+    }
   }
 }
 @media @desktop-widths {
+  .header__wrapper {
+    width: 1150px;
+  }
 
+  .header__logo {
+    padding-top: 8px;
+    position: absolute;
+    left: 50%;
+    margin-left: -123px;
+    z-index: 2;
+
+    a {
+      display: block;
+      position: absolute;
+      width: 149px;
+      height: 72px;
+      left: 48px;
+    }
+
+    img {
+      width: 149px;
+      height: 72px;
+    }
+  }
+
+  .header__catalog {
+    top: 29px;
+    left: 49px;
+
+    a {
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
+
+  .header__form {
+    top: 30px;
+    left: 268px;
+
+    a {
+      font-size: 17px;
+      line-height: 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 88px;
+      top: -30px;
+      left: -34px;
+      background-color: @gray-line;
+    }
+  }
+
+  .header__search {
+    right: 349px;
+
+    &:before {
+      left: -33px;
+    }
+  }
+
+  .header__basket {
+    right: 53px;
+
+    &:before {
+      left: -86px;
+    }
+  }
+
+  .header__new {
+    display: block;
+    position: absolute;
+    background-color: inherit;
+    top: 105px;
+    left: 51px;
+    z-index: 10;
+
+    a {
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
+  .header__sale {
+    display: block;
+    position: absolute;
+    background-color: inherit;
+    top: 105px;
+    left: 270px;
+    z-index: 10;
+
+    a {
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
 }

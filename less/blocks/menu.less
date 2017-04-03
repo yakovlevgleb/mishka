@@ -1,6 +1,23 @@
+.menu {
+  position: relative;
+  background: transparent;
+}
+
 .menu__item {
+  position: relative;
   text-decoration: none;
   width: 100%;
+  padding: 25px 185px 30px 28px;
+
+  &:active {
+    h2 {
+      opacity: 0.3;
+    }
+
+    svg {
+      opacity: 0.3;
+    }
+  }
 
   h2 {
     font-size: 19px;
@@ -8,26 +25,91 @@
     line-height: 24px;
     color: white;
   }
-  padding: 30px 185px 30px 30px;
 
   &--lighter {
+    position: relative;
     display: block;
     background-color: @salad;
+
+    svg {
+      position: absolute;
+      fill: @svg-salad;
+      opacity: 0.5;
+      top: 23px;
+      width: 41px;
+      height: 62px;
+      right: 36px;
+    }
   }
 
   &--darker {
+    position: relative;
     display: block;
     background-color: @salad-drk;
+
+    svg {
+      position: absolute;
+      fill: @svg-salad;
+      opacity: 0.5;
+      top: 20px;
+      width: 60px;
+      height: 61px;
+      right: 26px;
+    }
   }
 }
 
 .menu__wrapper {
   .container();
+  align-content: flex-end;
   padding: 0;
 }
 @media @tablet-widths {
+  .menu {
+    &:after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-position: center;
+      background-repeat: repeat-x;
+      background-size: 768px;
+      width: 100%;
+      height: 41px;
+      bottom: -17px;
+    }
+  }
+
   .menu__item {
-    padding: 35px 187px 35px 35px;
+    margin-top: 5px;
+    padding: 28px 187px 35px 35px;
+
+    h2 {
+      line-height: 30px;
+    }
+
+
+    &:hover {
+      margin-top: 0;
+      padding-top: 15px;
+      padding-bottom: 40px;
+
+      svg {
+        top: 25px;
+      }
+    }
+
+    &--lighter {
+      svg {
+        top: 30px;
+      }
+    }
+
+    &--darker {
+      svg {
+        top: 30px;
+        right: 34px;
+      }
+    }
   }
 
   .menu__wrapper {
@@ -35,7 +117,17 @@
   }
 }
 @media @desktop-widths {
+  .menu {
+    &:after {
+      background-size: 1150px;
+    }
+  }
+
   .menu__item {
-    padding: 35px 375px 35px 35px;
+    padding: 28px 375px 35px 38px;
+
+    &:hover {
+      padding-bottom: 40px;
+    }
   }
 }

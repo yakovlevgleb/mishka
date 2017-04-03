@@ -1,16 +1,19 @@
 .pluses {
-  padding: 34px 0;
+  padding-top: 27px;
+  padding-bottom: 28px;
 
   h2 {
     font-size: 25px;
     font-weight: 800;
     line-height: 30px;
     color: @black;
-    margin-bottom: 88px;
+    margin-bottom: 85px;
   }
 }
 
 .pluses__item {
+  display: block;
+  position: relative;
   width: 100%;
   font-size: 17px;
   font-weight: 800;
@@ -18,8 +21,64 @@
   color: @black;
   margin-bottom: 85px;
 
-  &:nth-last-child(1) {
+  svg {
+    position: absolute;
+    left: 8px;
+    top: -54px;
+    fill: @salad;
+  }
+
+  &:nth-child(2) {
+    width: 174px;
+  }
+
+  &:nth-child(3) {
+    margin-bottom: 81px;
+    width: 210px;
+
+    svg {
+      left: 0;
+    }
+  }
+
+  &:nth-child(4) {
+    margin-bottom: 84px;
+    width: 190px;
+
+    svg {
+      top: -48px;
+      left: 7px;
+    }
+  }
+
+  &:nth-child(5) {
+    margin-bottom: 83px;
+    width: 210px;
+
+    svg {
+      top: -51px;
+      left: 3px;
+    }
+  }
+
+  &:nth-child(6) {
+    margin-bottom: 83px;
+    width: 260px;
+
+    svg {
+      top: -51px;
+      left: -6px;
+    }
+  }
+
+  &:nth-child(7) {
     margin-bottom: 0;
+    width: 210px;
+
+    svg {
+      top: -52px;
+      left: 3px;
+    }
   }
 }
 
@@ -28,50 +87,116 @@
 }
 @media @tablet-widths {
   .pluses {
+    padding-top: 50px;
+    padding-bottom: 60px;
+
     h2 {
       width: 100%;
       font-size: 43px;
       line-height: 50px;
+      margin-bottom: 103px;
     }
   }
 
   .pluses__item {
-    width: 50%;
     font-size: 20px;
+    margin-right: 100px;
 
     &:nth-child(2) {
       order: 1;
+      width: 236px;
+      margin-bottom: 115px;
+      padding-right: 10px;
     }
 
     &:nth-child(3) {
+      width: 236px;
       order: 3;
+      margin-bottom: 115px;
     }
 
     &:nth-child(4) {
+      width: 236px;
       order: 5;
+      margin: 0 100px 0 0;
     }
 
     &:nth-child(5) {
+      width: 297px;
       order: 2;
+      margin: 0 0 115px;
     }
 
     &:nth-child(6) {
+      width: 297px;
       order: 4;
+      margin: 0 0 115px;
     }
 
     &:nth-child(7) {
+      width: 297px;
       order: 7;
+      margin: 0;
+      padding-right: 10px;
     }
   }
 }
 @media @desktop-widths {
   .pluses {
+    padding-top: 65px;
+    padding-bottom: 89px;
+
     h2 {
       font-size: 53px;
     }
 
     .pluses__wrapper {
       padding-left: 225px;
+    }
+
+    .pluses__item {
+      margin: 0;
+      font-size: 20px;
+
+      &:nth-child(2) {
+        width: 220px;
+        order: 1;
+        margin-bottom: 115px;
+        margin-right: 135px;
+      }
+
+      &:nth-child(3) {
+        width: 240px;
+        order: 3;
+        margin-bottom: 115px;
+        margin-right: 110px;
+      }
+
+      &:nth-child(4) {
+        width: 220px;
+        order: 5;
+        margin: 0 130px 0 0;
+      }
+
+      &:nth-child(5) {
+        width: 297px;
+        order: 2;
+        margin: 0 135px 115px 0;
+      }
+
+      &:nth-child(6) {
+        width: 297px;
+        order: 4;
+        margin: 0 135px 115px 0;
+      }
+
+      &:nth-child(7) {
+        width: 297px;
+        order: 7;
+        margin: 0;
+        padding-right: 10px;
+        margin-right: 135px;
+      }
     }
   }
 }

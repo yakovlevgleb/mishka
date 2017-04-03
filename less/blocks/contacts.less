@@ -1,5 +1,5 @@
 .contacts {
-  padding-top: 44px;
+  padding-top: 36px;
   padding-bottom: 39px;
 
   h2 {
@@ -7,7 +7,7 @@
     font-weight: 800;
     line-height: 30px;
     color: @black;
-    margin-bottom: 39px;
+    margin-bottom: 26px;
   }
 
   span {
@@ -17,16 +17,45 @@
     color: @gray;
   }
 
-  iframe {
+  .contacts__map {
     position: absolute;
     left: 0;
-    bottom: 100px;
+    bottom: 52px;
+    width: 320px;
+    height: 457px;
     margin-bottom: 39px;
+    background-image: url("../img/map-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    @media @retina {
+      background-image: url("../img/map-mobile@2x.jpg");
+    }
+
+    iframe {
+      width: 320px;
+      height: 457px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-map-pin.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: translate(-50%, -50%);
+      width: 66px;
+      height: 100px;
+      left: 49%;
+      top: 47%;
+    }
   }
 }
 
 .contacts__email {
-  margin-bottom: 39px;
+  margin-bottom: 30px;
+
+  span {
+    margin-right: 25px;
+  }
 
   a {
     text-decoration: none;
@@ -35,15 +64,35 @@
     line-height: 30px;
     color: @gray;
     border-bottom: 1px solid #62d1ba;
+
+    &:hover {
+      color: @salad;
+    }
+
+    &:active {
+      color: @salad;
+      opacity: 0.3;
+    }
   }
 }
 
 .contacts__adress {
-  margin-bottom: 539px;
+  margin-bottom: 533px;
+  display: flex;
+
+  span {
+    &:nth-last-of-type(1) {
+      width: 150px;
+    }
+
+    &:nth-child(1) {
+      margin-right: 30px;
+    }
+  }
 }
 
 .contacts__btn {
-  padding: 12px 50px;
+  padding: 14px 53px;
   max-width: 260px;
 }
 
@@ -53,43 +102,89 @@
 }
 @media @tablet-widths {
   .contacts {
+    padding-top: 62px;
+    padding-bottom: 57px;
+
     h2 {
       font-size: 43px;
       line-height: 50px;
       width: 100%;
+      margin-bottom: 47px;
     }
 
     span {
       font-size: 17px;
     }
 
-    iframe {
-      position: static;
-      left:0;
+    .contacts__map {
+      bottom: 68px;
       width: 768px;
+      height: 457px;
+      background-image: url("../img/map-tablet@1x.jpg");
+      @media @retina {
+        background-image: url("../img/map-tablet@2x.jpg");
+      }
+
+      iframe {
+        width: 768px;
+        height: 457px;
+      }
+
+      &:after {
+        left: 49.5%;
+        top: 47%;
+      }
+    }
+  }
+
+  .contacts__wrapper {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-flag.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 47px;
+      height: 81px;
+      right: 53px;
+      top: -15px;
     }
   }
 
   .contacts__email {
-    margin-right: 56px;
+    span {
+      margin-right: 20px;
+    }
+
+    a {
+      font-size: 17px;
+      line-height: 30px;
+    }
+    margin-right: 50px;
   }
 
   .contacts__adress {
     display: flex;
+    width: 290px;
+    margin-bottom: 569px;
 
     span {
+      &:nth-last-of-type(1) {
+        width: 219px;
+      }
+
       &:nth-child(1) {
         margin-right: 26px;
       }
     }
-    width: 290px;
-    margin-bottom: 62px;
   }
 
   .contacts__btn {
-    padding: 18px 39px 18px 38px;
-    max-width: 230px;
-    margin: 0 auto;
+    padding: 15px 39px 13px;
+    max-width: 232px;
+    margin-left: 219px;
   }
 }
 @media @desktop-widths {
@@ -97,22 +192,44 @@
     flex-direction: column;
     position: relative;
     padding-left: 225px;
+
+    &:before {
+      top: -9px;
+      left: 113px;
+    }
   }
 
   .contacts {
+    padding-top: 142px;
+    padding-bottom: 105px;
+
     h2 {
-      font-size: 43px;
-      line-height: 50px;
+      font-size: 53px;
+      line-height: 57px;
       order: 2;
     }
 
-    iframe {
+    .contacts__map {
       position: absolute;
       order: 1;
       left: auto;
-      top: -80px;
-      right: 0;
+      top: -70px;
+      right: 50px;
       width: 525px;
+      background-image: url("../img/map-desktop@1x.jpg");
+      @media @retina {
+        background-image: url("../img/map-desktop@2x.jpg");
+      }
+
+      iframe {
+        order: 1;
+        width: 525px;
+      }
+
+      &:after {
+        left: 51%;
+        top: 47%;
+      }
     }
   }
 
@@ -121,6 +238,7 @@
   }
 
   .contacts__adress {
+    margin-bottom: 80px;
     order: 4;
   }
 
