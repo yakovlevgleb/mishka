@@ -38,6 +38,6 @@
   },
 
   "dependencies": {
-   "load-grunt-tasks": "^3.5.2"
-}
+    "load-grunt-tasks": "^3.5.2"
+  }
 }
