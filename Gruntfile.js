@@ -11,7 +11,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
     postcss: {
       style: {
         options: {
@@ -29,7 +28,6 @@ module.exports = function(grunt) {
         src: "build/css/*.css"
       }
     },
-
     browserSync: {
       server: {
         bsFiles: {
@@ -127,7 +125,6 @@ module.exports = function(grunt) {
       build: ["build"]
     }
   });
-
   grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("symbols", ["svgmin", "svgstore"]);
   grunt.registerTask("build", [
