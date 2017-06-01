@@ -261,7 +261,7 @@ input[type=text] {
 
 .form__iinput {
   &+.form__icon {
-    opacity: 0.3;
+    opacity: .3;
   }
 
   &:hover {
@@ -357,6 +357,8 @@ ul {
 
   .element__wrapper {
     .container();
+    width: 768px;
+    padding: 0 50px;
   }
 
   .form__wrapper {
@@ -696,6 +698,12 @@ ul {
     padding-top: 119px;
   }
 
+  .form__wrapper {
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+  }
+
   .element__wrapper {
     .container();
   }
@@ -828,6 +836,7 @@ ul {
 
   .form__fio {
     padding-bottom: 22px;
+
     .form__header {
       padding-left: 60px;
     }
