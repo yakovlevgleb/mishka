@@ -1,5 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/yakovlevgleb/mishka.svg)](https://greenkeeper.io/)
+
 * Студент: [Gleb Yakovlev](https://up.htmlacademy.ru/adaptive/10/user/251249).
 * Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/id86119).
 
