@@ -5,7 +5,7 @@
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "~1.0.0",
-    "autoprefixer": "~7.1.1",
+    "autoprefixer": "~7.2.4",
     "css-mqpacker": "^6.0.1",
     "grunt": "1.0.1",
     "grunt-browser-sync": "2.2.0",
