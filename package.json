@@ -37,6 +37,6 @@
     "node": "6.10"
   },
   "dependencies": {
-    "load-grunt-tasks": "^3.5.2"
+    "load-grunt-tasks": "^5.1.0"
   }
 }
